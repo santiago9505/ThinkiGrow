@@ -1,16 +1,50 @@
 .header {
+  background-color: #9d9d9d;
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1.2rem;
+  align-items: center;
 }
 
 .header__items--container {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: right;
-  width: 40%;
+  flex-direction: column;
   gap: 10%;
   list-style: none;
+}
+
+.header__items--container-open {
+  background-color: coral;
+  display: flex;
+  height: 90vh;
+  position: absolute;
+  width: 100vw;
+  top: 5.3rem;
+  right: 0;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  list-style: none;
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 10%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.menu__icon {
+  display: flex;
 }
 
 .list__items--container a {
@@ -25,4 +59,10 @@
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   text-decoration: none;
+}
+
+.logo__container {
+  background-color: #c4c4c4;
+  padding: 0.4rem;
+  border-radius: 2rem;
 }

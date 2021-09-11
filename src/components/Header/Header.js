@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Turn as Hamburger } from "hamburger-react";
 
 //styles
 import "../../assets/styles/Header.css";
@@ -6,15 +7,28 @@ import "../../assets/styles/Header.css";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [isOpen, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(!isOpen);
+  };
+
   return (
     <header className="header">
       <figure className="logo__container">
-        <img className="logo" src="" alt="Logo" />
+        <h1>Succestory</h1>
       </figure>
-      <figure>
-        <img src="" alt="menu-icon" />
-      </figure>
-      <ul className="header__items--container">
+      <Hamburger
+        onClick={handleClick}
+        color="#fff"
+        toggled={isOpen}
+        toggle={setOpen}
+      />
+      <ul
+        className={
+          isOpen ? "header__items--container-open" : "header__items--container"
+        }
+      >
         <li className="list__items--container">
           <a href="/" className="header__button">
             Comienza una Campaña
