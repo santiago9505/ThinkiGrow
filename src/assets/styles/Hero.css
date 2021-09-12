@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+.hero{
+    width: 100%;
+    height: 262px;
+    background: #9D9D9D;
+    color: #000000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+.hero__call-to-action{
+    font-family: 'Roboto', sans-serif;
+}
