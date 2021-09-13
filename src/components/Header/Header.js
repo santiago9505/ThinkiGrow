@@ -30,17 +30,20 @@ const Header = () => {
         }
       >
         <li className="list__items--container">
-          <a href="/">REGISTRATE <img className="list__item--log-in-icon"/></a>
+          <a href="/">
+            REGISTRATE <img className="list__item--log-in-icon" />
+          </a>
         </li>
         <li className="list__items--container">
-          <a href="/">INGRESA <img className="list__item--log-in-icon"/></a>
+          <a href="/">
+            INGRESA <img className="list__item--log-in-icon" />
+          </a>
         </li>
         <li className="list__items--campaign">
           <a href="/" className="header__button">
             Comienza una Campaña
           </a>
         </li>
-        
       </ul>
     </header>
   );
