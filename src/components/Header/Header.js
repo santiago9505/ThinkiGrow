@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header className="header">
       <figure className="logo__container">
-        <h1>Succestory</h1>
+        <h3>Succestory</h3>
       </figure>
       <Hamburger
         onClick={handleClick}
@@ -30,16 +30,17 @@ const Header = () => {
         }
       >
         <li className="list__items--container">
+          <a href="/">REGISTRATE <img className="list__item--log-in-icon"/></a>
+        </li>
+        <li className="list__items--container">
+          <a href="/">INGRESA <img className="list__item--log-in-icon"/></a>
+        </li>
+        <li className="list__items--campaign">
           <a href="/" className="header__button">
             Comienza una Campaña
           </a>
         </li>
-        <li className="list__items--container">
-          <a href="/">LOG IN</a>
-        </li>
-        <li className="list__items--container">
-          <a href="/">SIGN UP</a>
-        </li>
+        
       </ul>
     </header>
   );
