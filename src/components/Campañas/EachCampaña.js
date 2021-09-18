@@ -1,8 +1,14 @@
 import React from "react";
 
-const EachCampaña = () => {
+//images
+import Ellipse from "../../assets/static/ellipse.png";
+
+const EachCampaña = ({ button }) => {
   return (
     <div className="each__campaña">
+      <figure className="project__logo">
+        <img src="" alt="Nombre Proyecto" />
+      </figure>
       <figure className="image__campaña--container">
         <img src="" alt="campaña" />
       </figure>
@@ -15,10 +21,14 @@ const EachCampaña = () => {
         </p>
         <figure className="progress__bar">
           <div className="bar">
-            <img src="" alt="circle" />
+            <img src={Ellipse} alt="circle" />
+            <article className="recolected">$40 COP</article>
           </div>
         </figure>
       </article>
+      <button className={button ? "viewProject" : "noneProject"}>
+        Ver proyecto
+      </button>
     </div>
   );
 };

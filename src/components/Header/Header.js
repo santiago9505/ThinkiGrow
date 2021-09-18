@@ -16,13 +16,15 @@ const Header = () => {
   return (
     <header className="header">
       <figure className="logo__container">
-        <h3>Succestory</h3>
+        <h3>THINKIGROW</h3>
       </figure>
       <Hamburger
         onClick={handleClick}
         color="#fff"
         toggled={isOpen}
         toggle={setOpen}
+        size={34}
+        rounded
       />
       <ul
         className={

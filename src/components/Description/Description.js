@@ -3,6 +3,11 @@ import React from "react";
 //styles
 import "../../assets/styles/Description.css";
 
+//images
+import World from "../../assets/static/1stIcon.png";
+import Project from "../../assets/static/2ndIcon.png";
+import Donations from "../../assets/static/3rdIcon.png";
+
 const Description = () => {
   return (
     <div className="description">
@@ -11,7 +16,7 @@ const Description = () => {
           <h1>SE VOLUNTARIO O VOLUNTARIA</h1>
         </article>
         <figure className="description__img-container">
-          <img className="img-container" src="" alt="voluntario" />
+          <img className="img" src={World} alt="voluntario" />
         </figure>
         <p className="description__paragraph">
           Únete a la comunidad más importante del mundo hispanohablante, que
@@ -26,7 +31,7 @@ const Description = () => {
           <h1>POSTULA TU PROYECTO</h1>
         </article>
         <figure className="description__img-container">
-          <img className="img-container" src="" alt="voluntario" />
+          <img className="img" src={Project} alt="voluntario" />
         </figure>
         <p className="description__paragraph">
           Únete a la comunidad más importante del mundo hispanohablante, que
@@ -41,7 +46,7 @@ const Description = () => {
           <h1>HAZ DONACIONES E INVIERTE</h1>
         </article>
         <figure className="description__img-container">
-          <img className="img-container" src="" alt="voluntario" />
+          <img className="img" src={Donations} alt="voluntario" />
         </figure>
         <p className="description__paragraph">
           Colocamos tus donaciones en proyectos productivos que ayuden a la

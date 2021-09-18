@@ -7,7 +7,12 @@ import "../../assets/styles/Campañas.css";
 const Campañas = () => {
   return (
     <div className="campañas">
-      <h1 className="campañas__title">CAMPAÑAS DESTACADAS</h1>
+      <article className="campañas__title">
+        <h1 className="">CAMPAÑAS DESTACADAS</h1>
+      </article>
+
+      <EachCampaña />
+      <EachCampaña />
       <EachCampaña />
     </div>
   );

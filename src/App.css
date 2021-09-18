@@ -13,8 +13,28 @@ html {
 
 .App {
   position: relative;
+  background-color: #061034;
 }
 
 h1 {
   font-size: 18px;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+@media (min-width: 368px) {
+  h1 {
+    font-size: 19px;
+  }
+
+  p {
+    font-size: 1.05rem;
+  }
 }

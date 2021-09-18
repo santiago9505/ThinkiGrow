@@ -1,0 +1,8 @@
+.all__campaigns--section {
+  background-color: red;
+}
+
+.carousel__container {
+  display: flex;
+  overflow-x: auto;
+}

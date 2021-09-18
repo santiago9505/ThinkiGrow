@@ -1,17 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 
-.hero{
-    width: 100%;
-    height: 262px;
-    background: #9D9D9D;
-    color: #000000;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 2rem;
+.hero {
+  width: 100%;
+  height: 262px;
+  color: white;
+  text-align: start;
+  display: grid;
+  grid-template-columns: 58% 45%;
+  padding: 2rem;
 }
 
-.hero__call-to-action{
-    font-family: 'Roboto', sans-serif;
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero__text h1 {
+  width: 80%;
+}
+
+.fig__container {
+  position: relative;
+  z-index: 0;
+}
+
+.fig__1 {
+  position: absolute;
+  background-color: #88edf3;
+  width: 3.2rem;
+  height: 9rem;
+  border-radius: 10rem;
+  top: -4rem;
+}
+
+.fig__2 {
+  position: absolute;
+  background-color: #f43030;
+  width: 3.2rem;
+  height: 6rem;
+  border-radius: 10rem;
+  bottom: 0.5rem;
+}
+
+.fig__3 {
+  position: absolute;
+  background-color: #63eb19;
+  width: 3.2rem;
+  height: 9rem;
+  border-radius: 10rem;
+  top: 1rem;
+  right: -0.3rem;
+}
+
+.fig__4 {
+  position: absolute;
+  background-color: #f0e71f;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 10rem;
+  bottom: -1.5rem;
+  right: -0.3rem;
+}
+
+.hero__call-to-action {
+  width: 90%;
 }
