@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <article className="hero__text">
-        <h1>FINANCIA ÚNETE E INVIERTE</h1>
+        <h1>ÚNETE, AYUDA O CREA EN COMUNIDAD</h1>
         <p className="hero__call-to-action">
           Únete a comunidades de aprendizaje, aporta a proyectos que cambien
           vidas, o crea un proyecto al que todos quieran sumarse

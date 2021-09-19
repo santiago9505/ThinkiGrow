@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header className="header">
       <figure className="logo__container">
-        <h3>THINKIGROW</h3>
+        <h1>THINKIGROW</h1>
       </figure>
       <Hamburger
         onClick={handleClick}

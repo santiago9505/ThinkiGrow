@@ -8,7 +8,7 @@ const Campañas = () => {
   return (
     <div className="campañas">
       <article className="campañas__title">
-        <h1 className="">CAMPAÑAS DESTACADAS</h1>
+        <h1 className="">PROYECTOS DESTACADOS</h1>
       </article>
 
       <EachCampaña />

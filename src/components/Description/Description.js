@@ -13,14 +13,14 @@ const Description = () => {
     <div className="description">
       <div className="description__item">
         <article className="description__item--title">
-          <h1>SE VOLUNTARIO O VOLUNTARIA</h1>
+          <h1>ÚNETE A UN PROYECTO</h1>
         </article>
         <figure className="description__img-container">
           <img className="img" src={World} alt="voluntario" />
         </figure>
         <p className="description__paragraph">
           Únete a la comunidad más importante del mundo hispanohablante, que
-          conecta a las personas con causas que ayudan a la sociedad
+          conecta a las personas con comunidades de investigación y aprendizaje
         </p>
         <div>
           <button className="description__button">UNIRSE</button>
@@ -28,30 +28,30 @@ const Description = () => {
       </div>
       <div className="description__item">
         <article className="description__item--title">
-          <h1>POSTULA TU PROYECTO</h1>
-        </article>
-        <figure className="description__img-container">
-          <img className="img" src={Project} alt="voluntario" />
-        </figure>
-        <p className="description__paragraph">
-          Únete a la comunidad más importante del mundo hispanohablante, que
-          conecta a las personas con causas que ayudan a la sociedad
-        </p>
-        <div>
-          <button className="description__button">POSTULARSE</button>
-        </div>
-      </div>
-      <div className="description__item">
-        <article className="description__item--title">
-          <h1>HAZ DONACIONES E INVIERTE</h1>
+          <h1>APOYA CAUSAS</h1>
         </article>
         <figure className="description__img-container">
           <img className="img" src={Donations} alt="voluntario" />
         </figure>
         <p className="description__paragraph">
-          Colocamos tus donaciones en proyectos productivos que ayuden a la
-          educación o al medio ambiente, transformamos parte del monto en
-          activos digitales
+          Aporta a causas que ayudan al medio ambiente, educación y erradicación
+          de la pobreza. La unión hace la fuerza!
+        </p>
+        <div>
+          <button className="description__button">APORTAR</button>
+        </div>
+      </div>
+      <div className="description__item">
+        <article className="description__item--title">
+          <h1>CREA UN PROYECTO</h1>
+        </article>
+        <figure className="description__img-container">
+          <img className="img" src={Project} alt="voluntario" />
+        </figure>
+        <p className="description__paragraph">
+          Crea un proyecto al que todos quieran sumarse, si tienes una idea, un
+          emprendimiento o una causa, nosotros te ayudamos a que el mundo la
+          conozca y a que las personas se puedan unir
         </p>
         <div>
           <button className="description__button">INVERTIR</button>

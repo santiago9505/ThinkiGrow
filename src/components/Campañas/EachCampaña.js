@@ -13,7 +13,7 @@ const EachCampaña = ({ button }) => {
         <img src="" alt="campaña" />
       </figure>
       <article className="each__campaña--paragraph">
-        <h1>NOMBRE DEL PROYECTO</h1>
+        <h1 className="project__title">NOMBRE DEL PROYECTO</h1>
         <p>
           La fundación Bidipet, se encuentra liderando un programa de castración
           de animales en abandono, el proyecto requiere de fondos para contratar

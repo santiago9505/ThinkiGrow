@@ -17,11 +17,12 @@ html {
 }
 
 h1 {
-  font-size: 18px;
+  font-size: 20px;
+  letter-spacing: 1px;
 }
 
 p {
-  font-size: 1rem;
+  font-size: 12px;
   font-weight: 300;
 }
 
