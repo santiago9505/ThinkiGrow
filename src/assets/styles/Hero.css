@@ -67,3 +67,13 @@
 .hero__call-to-action {
   width: 100%;
 }
+
+@media (min-width: 368px) {
+  .fig__1 {
+    left: 0.5rem;
+  }
+
+  .fig__2 {
+    left: 0.5rem;
+  }
+}

@@ -1,0 +1,45 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.social__media {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.footer__items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer__items li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer__title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.facebook--icon {
+  width: 1rem;
+}
+
+.instagram--icon {
+  width: 2rem;
+}
+
+.twitter--icon {
+  width: 2rem;
+}

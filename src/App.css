@@ -32,10 +32,10 @@ h3 {
 
 @media (min-width: 368px) {
   h1 {
-    font-size: 19px;
+    font-size: 22px;
   }
 
   p {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 }

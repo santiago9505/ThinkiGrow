@@ -10,7 +10,6 @@ const Campañas = () => {
       <article className="campañas__title">
         <h1 className="">PROYECTOS DESTACADOS</h1>
       </article>
-
       <EachCampaña />
       <EachCampaña />
       <EachCampaña />

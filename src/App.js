@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import Description from "./components/Description/Description";
 import Campañas from "./components/Campañas/Campañas";
 import AllCampaigns from "./components/AllCampaigns/AllCampaigns";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Description />
       <Campañas />
       <AllCampaigns />
+      <Footer />
     </div>
   );
 }

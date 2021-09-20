@@ -24,7 +24,7 @@
   justify-content: space-between;
   background-color: #5c5c5c;
   margin: 1rem;
-  height: 20.8rem;
+  height: 22.8rem;
   max-width: 20rem;
   min-width: 17rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -43,11 +43,23 @@
 .each__campaña--paragraph {
   background-color: #1c193f;
   margin-top: 3rem;
-  padding: 0.8rem;
+  padding: 1rem 1rem 2rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.8rem;
   font-family: "Roboto";
+}
+
+.each__campaña--complete {
+  background-color: #1c193f;
+  margin-top: 3rem;
+  padding: 1rem 1rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-family: "Roboto";
+  color: white;
+  max-height: 13rem;
 }
 
 .project__title {
@@ -56,16 +68,15 @@
 }
 
 .each__campaña--paragraph p {
-  font-size: 14px;
   font-style: normal;
   font-weight: lighter;
   line-height: 16.41px;
   text-align: justify;
+  color: white;
 }
 
 .progress__bar {
-  background-color: #dad8d8;
-  border-radius: 1rem;
+  border-radius: 10rem;
   width: 100%;
   height: 16px;
   display: flex;
@@ -77,28 +88,77 @@
 .recolected {
   position: absolute;
   bottom: -1.2rem;
+  right: -1rem;
+  font-size: 10px;
+  color: white;
+}
+
+.goal {
+  position: absolute;
+  bottom: -1.03rem;
+  right: 0;
+  font-size: 10px;
+  color: white;
 }
 
 .bar {
-  background-color: #9d9d9d;
-  width: 64%;
+  width: 48%;
   height: 10px;
   display: flex;
   justify-content: end;
-  border-radius: 1rem;
+  border-radius: 10rem;
   outline: 3px solid #ffdd00;
-}
-
-.bar img {
-  width: 0.8rem;
-  height: 0.8rem;
-  z-index: 1;
+  position: relative;
 }
 
 .viewProject {
-  background-color: rebeccapurple;
+  background-color: #1c193f;
+  padding: 0 0 0.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.viewProject button {
+  width: 10rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 0.13rem;
+  border: 2px solid #ffdd00;
+  border-radius: 3rem;
+  background-color: transparent;
+  color: white;
 }
 
 .noneProject {
   display: none;
+}
+
+.elipse__container img {
+  width: 1.2rem;
+  height: 1.2rem;
+  z-index: 1;
+  position: absolute;
+  right: -0.5rem;
+}
+
+.elipse__container {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (min-width: 368px) {
+  .each__campaña--paragraph {
+    gap: 1.5rem;
+  }
+
+  .project__title {
+    font-size: 1.2rem;
+  }
+
+  .each__campaña--complete p {
+    font-size: 0.8rem;
+  }
 }

@@ -54,7 +54,7 @@ const Description = () => {
           conozca y a que las personas se puedan unir
         </p>
         <div>
-          <button className="description__button">INVERTIR</button>
+          <button className="description__button">CREAR</button>
         </div>
       </div>
     </div>
