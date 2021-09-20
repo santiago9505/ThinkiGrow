@@ -68,6 +68,10 @@
   width: 100%;
 }
 
+.call__to-action {
+  display: none;
+}
+
 @media (min-width: 368px) {
   .fig__1 {
     left: 0.5rem;
@@ -75,5 +79,90 @@
 
   .fig__2 {
     left: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: auto;
+    margin: 2rem 0 0 0;
+    height: 46vw;
+    max-height: 400px;
+  }
+
+  .hero__text h1 {
+    width: 80%;
+    line-height: 32.81px;
+  }
+
+  .hero__text {
+    gap: 2.3rem;
+  }
+
+  .hero__call-to-action {
+    width: 90%;
+  }
+
+  .call__container {
+    display: flex;
+    align-items: center;
+  }
+
+  .call__to-action {
+    display: block;
+    width: 16.7rem;
+    height: 1.7rem;
+    background-color: #1c193f;
+    border: 2px solid #ffdd00;
+    border-radius: 3rem;
+    color: white;
+    font-size: 16px;
+    padding-top: 3px;
+  }
+
+  .fig__1 {
+    top: -6rem;
+    width: 80px;
+    height: 211px;
+  }
+
+  .fig__2 {
+    width: 80px;
+    height: 122px;
+    bottom: 2.8rem;
+  }
+
+  .fig__3 {
+    right: 6rem;
+    width: 80px;
+    height: 211px;
+  }
+
+  .fig__4 {
+    width: 80px;
+    right: 6rem;
+    height: 80px;
+  }
+
+  .fig__5 {
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 211px;
+    border-radius: 10rem;
+    top: -3rem;
+    right: -0.3rem;
+    background-color: #b35fba;
+  }
+
+  .fig__6 {
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 122px;
+    border-radius: 10rem;
+    bottom: -0.5rem;
+    right: -0.3rem;
+    background-color: #ff7888;
   }
 }

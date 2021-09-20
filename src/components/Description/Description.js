@@ -35,7 +35,8 @@ const Description = () => {
         </figure>
         <p className="description__paragraph">
           Aporta a causas que ayudan al medio ambiente, educación y erradicación
-          de la pobreza. La unión hace la fuerza!
+          de la pobreza. Nosotros damos un seguimiento para que tu aporte cumpla
+          el objetivo. La unión hace la fuerza!
         </p>
         <div>
           <button className="description__button">APORTAR</button>

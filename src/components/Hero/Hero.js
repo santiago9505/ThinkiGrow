@@ -11,12 +11,17 @@ const Hero = () => {
           Únete a comunidades de aprendizaje, aporta a proyectos que cambien
           vidas, o crea un proyecto al que todos quieran sumarse
         </p>
+        <div className="call__container">
+          <button class="call__to-action">ÚNETE A UNA COMUNIDAD</button>
+        </div>
       </article>
       <div className="fig__container">
         <figure className="fig__1"></figure>
         <figure className="fig__2"></figure>
         <figure className="fig__3"></figure>
         <figure className="fig__4"></figure>
+        <figure className="fig__5"></figure>
+        <figure className="fig__6"></figure>
       </div>
     </section>
   );
