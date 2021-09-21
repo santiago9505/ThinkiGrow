@@ -13,7 +13,10 @@ const Description = () => {
     <div className="description">
       <div className="description__item">
         <article className="description__item--title">
-          <h1>ÚNETE A UN PROYECTO</h1>
+          <h1>
+            ÚNETE A <br />
+            UN PROYECTO
+          </h1>
         </article>
         <figure className="description__img-container">
           <img className="img" src={World} alt="voluntario" />
@@ -28,7 +31,9 @@ const Description = () => {
       </div>
       <div className="description__item">
         <article className="description__item--title">
-          <h1>APOYA CAUSAS</h1>
+          <h1>
+            APOYA <br /> CAUSAS
+          </h1>
         </article>
         <figure className="description__img-container">
           <img className="img" src={Donations} alt="voluntario" />
@@ -44,7 +49,9 @@ const Description = () => {
       </div>
       <div className="description__item">
         <article className="description__item--title">
-          <h1>CREA UN PROYECTO</h1>
+          <h1>
+            CREA UN <br /> PROYECTO
+          </h1>
         </article>
         <figure className="description__img-container">
           <img className="img" src={Project} alt="voluntario" />

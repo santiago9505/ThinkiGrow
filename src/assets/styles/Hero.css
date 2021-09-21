@@ -23,6 +23,8 @@
 
 .fig__container {
   position: relative;
+  max-width: 300px;
+  max-height: 308.13px;
   z-index: 0;
 }
 
@@ -73,12 +75,21 @@
 }
 
 @media (min-width: 368px) {
+  .hero {
+    height: 75vw;
+    max-height: 290px;
+  }
   .fig__1 {
+    height: 11rem;
     left: 0.5rem;
   }
 
   .fig__2 {
     left: 0.5rem;
+  }
+
+  .fig__4 {
+    bottom: 0.5rem;
   }
 }
 
@@ -86,7 +97,7 @@
   .hero {
     height: auto;
     margin: 2rem 0 0 0;
-    height: 46vw;
+    height: 48vw;
     max-height: 400px;
   }
 
@@ -110,8 +121,8 @@
 
   .call__to-action {
     display: block;
-    width: 16.7rem;
-    height: 1.7rem;
+    width: 16.8rem;
+    height: 2rem;
     background-color: #1c193f;
     border: 2px solid #ffdd00;
     border-radius: 3rem;
@@ -133,14 +144,15 @@
   }
 
   .fig__3 {
-    right: 6rem;
+    right: 34%;
     width: 80px;
     height: 211px;
   }
 
   .fig__4 {
+    bottom: -1.5rem;
     width: 80px;
-    right: 6rem;
+    right: 34%;
     height: 80px;
   }
 

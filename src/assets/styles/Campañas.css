@@ -162,3 +162,18 @@
     font-size: 0.8rem;
   }
 }
+
+@media (min-width: 768px) {
+  .campañas__container {
+    display: grid;
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .each__campaña:first-child(1) {
+  }
+
+  .project__text--description {
+    font-size: 16px;
+  }
+}

@@ -18,7 +18,7 @@ const EachCampaña = ({ button }) => {
         }
       >
         <h1 className="project__title">NOMBRE DEL PROYECTO</h1>
-        <p>
+        <p className="project__text--description">
           La fundación Bidipet, se encuentra liderando un programa de castración
           de animales en abandono, el proyecto requiere de fondos para contratar
           a practicantes de veterinaria

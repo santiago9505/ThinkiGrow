@@ -10,9 +10,17 @@ const Campañas = () => {
       <article className="campañas__title">
         <h1 className="">PROYECTOS DESTACADOS</h1>
       </article>
-      <EachCampaña />
-      <EachCampaña />
-      <EachCampaña />
+      <div className="campañas__container">
+        <div>
+          <EachCampaña />
+        </div>
+        <div>
+          <EachCampaña />
+        </div>
+        <div>
+          <EachCampaña />
+        </div>
+      </div>
     </div>
   );
 };
