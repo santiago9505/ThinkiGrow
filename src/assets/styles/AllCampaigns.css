@@ -36,3 +36,21 @@
 .button__show--more img {
   width: 2rem;
 }
+
+@media (min-width: 768px) {
+  .carousel__container {
+    padding-bottom: 3rem;
+  }
+
+  #carousel__container::-webkit-scrollbar {
+    display: flex;
+    height: 1.5rem;
+    border: 3px solid #ffdd00;
+  }
+
+  #carousel__container::-webkit-scrollbar-thumb {
+    height: 10px;
+    background-color: #1c193f;
+    border: 4px solid #ffdd00;
+  }
+}

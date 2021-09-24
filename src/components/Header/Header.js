@@ -38,7 +38,12 @@ const Header = () => {
         </li>
         <li className="list__items--container">
           <a href="/">
-            INGRESA <img className="list__item--log-in-icon" />
+            GRUPOS <img className="list__item--log-in-icon" />
+          </a>
+        </li>
+        <li className="list__items--container">
+          <a href="/">
+            CAMPAÑAS <img className="list__item--log-in-icon" />
           </a>
         </li>
         <li className="list__items--campaign">

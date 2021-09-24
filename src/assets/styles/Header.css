@@ -15,7 +15,7 @@
 }
 
 .header__items--container-open {
-  background-color: #5c5c5c;
+  background-color: #19022c;
   display: flex;
   height: 264px;
   position: absolute;
@@ -29,6 +29,7 @@
   animation-duration: 1s;
   animation-name: slidein;
   z-index: 1;
+  text-align: start;
 }
 
 @keyframes slidein {
@@ -48,17 +49,17 @@
 }
 
 .list__items--container {
-  width: 192px;
-  justify-content: center;
+  width: 60%;
   height: 2rem;
 }
 
 .list__items--container a {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
   text-decoration: none;
   color: #fefbfb;
-  display: inline-flex;
-  justify-content: space-evenly;
-  align-items: center;
   width: 100%;
   height: 100%;
   animation: fadeIn 2s;
@@ -77,6 +78,8 @@
 }
 
 .list__items--campaign {
+  margin: 1rem 0;
+  text-align: center;
   width: 231px;
 }
 
@@ -91,10 +94,11 @@
 }
 
 .header__button {
-  background-color: #c4c4c4;
+  background-color: #1c193f;
   border: none;
   width: 100%;
   padding: 0.5rem 1rem;
+  border: 3px solid #ffdd00;
   border-radius: 2rem;
   text-decoration: none;
   animation: fadeIn 2s;
@@ -109,7 +113,28 @@
 }
 
 @media (min-width: 368px) {
+  .list__items--container {
+    width: 50%;
+  }
 }
 
 @media (min-width: 768px) {
+  .header__items--container-open {
+    height: 58vh;
+    align-items: flex-start;
+    text-align: start;
+  }
+  .list__items--container {
+    padding: 2rem;
+    gap: 2rem;
+    width: 40%;
+  }
+
+  .list__items--container a {
+    align-items: center;
+  }
+
+  .header__button {
+    margin-left: 1rem;
+  }
 }

@@ -11,7 +11,13 @@ const AllCampaigns = () => {
       <article className="all__campaigns--title">
         <h1>TODAS LAS CAMPAÑAS</h1>
       </article>
-      <div className="carousel__container">
+      <div id="carousel__container" className="carousel__container">
+        <EachCampaña button="VER PROYECTO" />
+        <EachCampaña button="VER PROYECTO" />
+        <EachCampaña button="VER PROYECTO" />
+        <EachCampaña button="VER PROYECTO" />
+        <EachCampaña button="VER PROYECTO" />
+        <EachCampaña button="VER PROYECTO" />
         <EachCampaña button="VER PROYECTO" />
         <EachCampaña button="VER PROYECTO" />
         <EachCampaña button="VER PROYECTO" />

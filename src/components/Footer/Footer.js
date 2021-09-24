@@ -26,31 +26,35 @@ const Footer = () => {
         </figure>
       </div>
       <ul className="footer__items">
-        <li>
-          <a className="footer__title" href="">
-            Conecta ahora
-          </a>
-        </li>
-        <li>
-          <a href="">Únete a una comunidad</a>
-        </li>
-        <li>
-          <a href="">Apoya a causas</a>
-        </li>
-        <li>
-          <a href="">Crea un Proyecto</a>
-        </li>
-        <li>
-          <a className="footer__title" href="">
-            Conócenos
-          </a>
-        </li>
-        <li>
-          <a href="">Regístrate</a>
-        </li>
-        <li>
-          <a href="">Contáctanos</a>
-        </li>
+        <div className="footer__group">
+          <li>
+            <a className="footer__title" href="">
+              Conecta ahora
+            </a>
+          </li>
+          <li>
+            <a href="">Únete a una comunidad</a>
+          </li>
+          <li>
+            <a href="">Apoya a causas</a>
+          </li>
+          <li>
+            <a href="">Crea un Proyecto</a>
+          </li>
+        </div>
+        <div className="footer__group">
+          <li>
+            <a className="footer__title" href="">
+              Conócenos
+            </a>
+          </li>
+          <li>
+            <a href="">Regístrate</a>
+          </li>
+          <li>
+            <a href="">Contáctanos</a>
+          </li>
+        </div>
       </ul>
     </footer>
   );
