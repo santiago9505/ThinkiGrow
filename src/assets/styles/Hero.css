@@ -72,6 +72,13 @@
 
 .call__to-action {
   display: none;
+  cursor: pointer;
+  background-color: #1c193f;
+  border: 2px solid #ffdd00;
+}
+
+.call__to-action:hover {
+  background: #393466;
 }
 
 @media (min-width: 368px) {
@@ -123,8 +130,6 @@
     display: block;
     width: 16.8rem;
     height: 2rem;
-    background-color: #1c193f;
-    border: 2px solid #ffdd00;
     border-radius: 3rem;
     color: white;
     font-size: 16px;
@@ -176,5 +181,95 @@
     bottom: -0.5rem;
     right: -0.3rem;
     background-color: #ff7888;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    margin: 2rem 0 0 0;
+    height: 78vh;
+    max-height: 500px;
+    min-height: 530px;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero__text {
+    justify-content: center;
+    gap: 2.5rem;
+  }
+
+  .hero__text h1 {
+    width: 95%;
+  }
+
+  .hero__call-to-action {
+    width: 90%;
+  }
+
+  .call__to-action {
+    height: 3rem;
+  }
+
+  .fig__container {
+    max-width: 500px;
+    max-height: none;
+    min-height: 180px;
+    width: 90%;
+    height: 105%;
+  }
+
+  .fig__1 {
+    top: -3rem;
+    left: 0;
+    width: 27%;
+    height: 280px;
+    max-width: 120px;
+  }
+
+  .fig__2 {
+    width: 27%;
+    height: 170px;
+    bottom: 3.5rem;
+    left: 0;
+    max-width: 120px;
+  }
+
+  .fig__3 {
+    top: 5rem;
+    right: 37%;
+    width: 27%;
+    height: 280px;
+    max-width: 120px;
+  }
+
+  .fig__4 {
+    bottom: -1rem;
+    width: 27%;
+    right: 37%;
+    height: 24%;
+    max-width: 120px;
+  }
+
+  .fig__5 {
+    width: 27%;
+    height: 280px;
+    top: 1rem;
+    right: 0;
+    max-width: 120px;
+  }
+
+  .fig__6 {
+    width: 27%;
+    height: 150px;
+    bottom: 0.5rem;
+    right: 0;
+    max-width: 120px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero {
+    height: 80vh;
   }
 }
