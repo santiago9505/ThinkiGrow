@@ -35,6 +35,7 @@
   height: 9rem;
   border-radius: 10rem;
   top: -4rem;
+  transition: 1s;
 }
 
 .fig__2 {
@@ -79,6 +80,7 @@
 
 .call__to-action:hover {
   background: #393466;
+  transition: 0.5s;
 }
 
 @media (min-width: 368px) {

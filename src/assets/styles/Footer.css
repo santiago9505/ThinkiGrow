@@ -44,6 +44,9 @@
   width: 2rem;
 }
 
+.cita {
+  font-size: 14px;
+}
 @media (min-width: 768px) {
   .footer {
   }
@@ -63,5 +66,11 @@
 
   .footer__title {
     font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__items {
+    gap: 0;
   }
 }

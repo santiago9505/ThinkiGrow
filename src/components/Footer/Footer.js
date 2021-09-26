@@ -56,6 +56,9 @@ const Footer = () => {
           </li>
         </div>
       </ul>
+      <div>
+        <p className="cita">De Colombia con 💙 para el mundo 🐱‍🏍</p>
+      </div>
     </footer>
   );
 };
