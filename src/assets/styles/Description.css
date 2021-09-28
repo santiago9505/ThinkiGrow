@@ -33,6 +33,7 @@
 .description__paragraph {
   padding: 0 0.5rem;
   text-align: justify;
+  max-width: 453px;
 }
 
 .description__button {
@@ -91,9 +92,10 @@
   }
 
   .description__button {
-    width: 12rem;
+    width: 8rem;
     height: 2rem;
     border-radius: 3rem;
+    border: 3px solid #ffdd00;
   }
 }
 
@@ -119,7 +121,36 @@
   }
 
   .description__button {
-    height: 3rem;
+    height: 2.5rem;
     font-size: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .description {
+    gap: 2rem;
+  }
+  .description__paragraph {
+    height: 110px;
+  }
+  .description__item {
+    gap: 1rem;
+  }
+  .description__item--title h1 {
+    font-size: 24px;
+  }
+  .img {
+    width: 100px;
+    padding: 2rem 0;
+  }
+  .description__paragraph {
+    font-size: 20px;
+    height: 8rem;
+  }
+
+  .description__button {
+    width: 15rem;
+    height: 2.5rem;
+    font-size: 20px;
   }
 }

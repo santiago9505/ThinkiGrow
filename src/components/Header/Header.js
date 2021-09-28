@@ -39,17 +39,17 @@ const Header = () => {
       >
         <li className="list__items--container">
           <a href="/">
-            Regístrate <img src={Icon1} className="list__item--log-in-icon" />
+            REGÍSTRATE <img src={Icon1} className="list__item--log-in-icon" />
           </a>
         </li>
         <li className="list__items--container">
           <a href="/">
-            Grupos <img src={Icon2} className="list__item--log-in-icon" />
+            GRUPOS <img src={Icon2} className="list__item--log-in-icon" />
           </a>
         </li>
         <li className="list__items--container">
           <a href="/">
-            Campañas <img src={Icon3} className="list__item--log-in-icon" />
+            CAMPAÑAS <img src={Icon3} className="list__item--log-in-icon" />
           </a>
         </li>
         <li className="list__items--campaign">

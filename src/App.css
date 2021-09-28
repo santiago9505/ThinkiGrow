@@ -26,6 +26,10 @@ p {
   font-weight: 300;
 }
 
+h2 {
+  font-size: 20px;
+}
+
 h3 {
   font-weight: 500;
 }
@@ -33,6 +37,10 @@ h3 {
 @media (min-width: 368px) {
   h1 {
     font-size: 22px;
+  }
+
+  h2 {
+    font-size: 21px;
   }
 
   p {
@@ -57,5 +65,15 @@ h3 {
   }
   p {
     font-size: 22px;
+  }
+}
+
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 28px;
+    font-weight: lighter;
   }
 }

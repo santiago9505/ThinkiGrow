@@ -35,7 +35,6 @@
   height: 9rem;
   border-radius: 10rem;
   top: -4rem;
-  transition: 1s;
 }
 
 .fig__2 {
@@ -75,7 +74,7 @@
   display: none;
   cursor: pointer;
   background-color: #1c193f;
-  border: 2px solid #ffdd00;
+  border: 3px solid #ffdd00;
 }
 
 .call__to-action:hover {
@@ -272,6 +271,56 @@
 
 @media (min-width: 1280px) {
   .hero {
-    height: 80vh;
+    height: 95vh;
+    max-height: 600px;
+    justify-content: space-around;
+  }
+  .fig__container {
+    min-height: 550px;
+  }
+
+  .fig__1 {
+    top: -5rem;
+    width: 133px;
+    height: 350px;
+    max-width: none;
+  }
+  .fig__2 {
+    bottom: 4.5rem;
+    width: 133px;
+    height: 202px;
+    max-width: none;
+  }
+  .fig__3 {
+    width: 133px;
+    height: 350px;
+    max-width: none;
+  }
+
+  .fig__4 {
+    width: 133px;
+    height: 133px;
+    max-width: none;
+  }
+  .fig__5 {
+    width: 133px;
+    height: 350px;
+    max-width: none;
+    top: -1rem;
+  }
+
+  .fig__6 {
+    width: 133px;
+    height: 202px;
+    max-width: none;
+    bottom: 0.5rem;
+  }
+  .call__to-action {
+    width: 25rem;
+    height: 52px;
+    font-size: 20px;
+  }
+  .hero__text {
+    width: 50%;
   }
 }

@@ -72,6 +72,11 @@
   -o-animation: fadeIn 2s;
 }
 
+.list__items--container a:hover {
+  color: #88edf3;
+  transition: 0.5s;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -90,6 +95,7 @@
 .list__items--campaign a {
   color: #fefbfb;
 }
+
 .list__item--log-in-icon {
   width: 25px;
   height: 25px;
@@ -128,6 +134,9 @@
 }
 
 @media (min-width: 768px) {
+  .header {
+    height: 15vh;
+  }
   .header__items--container-open {
     height: 66vh;
     align-items: flex-start;

@@ -23,7 +23,8 @@ const Description = () => {
         </figure>
         <p className="description__paragraph">
           Únete a la comunidad más importante del mundo hispanohablante, que
-          conecta a las personas con comunidades de investigación y aprendizaje
+          conecta a las personas con comunidades de investigación, aprendizaje o
+          temas positivos con un impacto
         </p>
         <div>
           <button className="description__button">UNIRSE</button>
