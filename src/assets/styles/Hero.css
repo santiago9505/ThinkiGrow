@@ -25,7 +25,6 @@
   position: relative;
   max-width: 300px;
   max-height: 308.13px;
-  z-index: 0;
 }
 
 .fig__1 {
@@ -188,9 +187,8 @@
 @media (min-width: 1024px) {
   .hero {
     margin: 2rem 0 0 0;
-    height: 78vh;
-    max-height: 500px;
-    min-height: 530px;
+    height: 83vh;
+    max-height: none;
     display: flex;
     align-items: center;
   }
@@ -198,6 +196,7 @@
   .hero__text {
     justify-content: center;
     gap: 2.5rem;
+    width: 60%;
   }
 
   .hero__text h1 {
@@ -213,58 +212,59 @@
   }
 
   .fig__container {
-    max-width: 500px;
-    max-height: none;
-    min-height: 180px;
-    width: 90%;
-    height: 105%;
+    max-width: none;
+    min-height: 430px;
+    width: 40%;
+    height: 100%;
   }
 
   .fig__1 {
-    top: -3rem;
-    left: 0;
-    width: 27%;
-    height: 280px;
+    top: -4rem;
+    left: 2rem;
+    width: 21%;
+    height: 260px;
     max-width: 120px;
   }
 
   .fig__2 {
-    width: 27%;
-    height: 170px;
+    width: 21%;
+    height: 150px;
     bottom: 3.5rem;
-    left: 0;
+    left: 2rem;
     max-width: 120px;
   }
 
   .fig__3 {
-    top: 5rem;
-    right: 37%;
-    width: 27%;
-    height: 280px;
+    top: 3rem;
+    right: 50%;
+    transform: translate(50%);
+    width: 21%;
+    height: 260px;
     max-width: 120px;
   }
 
   .fig__4 {
-    bottom: -1rem;
-    width: 27%;
-    right: 37%;
-    height: 24%;
+    bottom: 0;
+    width: 21%;
+    right: 50%;
+    transform: translate(50%);
+    height: 23%;
     max-width: 120px;
   }
 
   .fig__5 {
-    width: 27%;
-    height: 280px;
-    top: 1rem;
-    right: 0;
+    width: 21%;
+    height: 260px;
+    top: -2em;
+    right: 2rem;
     max-width: 120px;
   }
 
   .fig__6 {
-    width: 27%;
+    width: 21%;
     height: 150px;
-    bottom: 0.5rem;
-    right: 0;
+    bottom: 1rem;
+    right: 2rem;
     max-width: 120px;
   }
 }
@@ -272,10 +272,12 @@
 @media (min-width: 1280px) {
   .hero {
     height: 95vh;
+
     max-height: 600px;
     justify-content: space-around;
   }
   .fig__container {
+    width: 45%;
     min-height: 550px;
   }
 

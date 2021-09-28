@@ -1,10 +1,15 @@
 import React from "react";
 
+//styles
 import "../../assets/styles/Comunities.css";
+
+//images
+import CryptoAssets from "../../assets/static/blockchain.jpg";
 
 const CardSecondary = () => {
   return (
     <div className="card-secondary">
+      <img className="background__image" src={CryptoAssets} alt="background" />
       <figure className="logo__image--container">
         <img className="project-logo" src="" alt="logo" />
       </figure>

@@ -30,18 +30,26 @@
   padding: 1rem 1rem;
 }
 
+.background__image {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  z-index: -1;
+}
+
 .principal__card--text {
-  padding: 2rem 1rem;
+  height: 100%;
   background-color: #1c193f;
 }
 
 .card-secondary {
   display: flex;
   width: 276px;
-  background-color: #5c5c5c;
   height: 208px;
   align-items: flex-end;
   position: relative;
+  z-index: 2;
 }
 
 .logo__image--container {
@@ -54,6 +62,7 @@
   width: 46px;
   height: 46px;
   background-color: #c4c4c4;
+  border-radius: 50%;
 }
 
 .card__paragraph {
@@ -70,17 +79,97 @@
   justify-content: space-between;
 }
 
+.image__group {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.start {
+  font-size: 1rem;
+}
 @media (min-width: 368px) {
   .card-secondary {
-    width: 295px;
-    height: 220px;
+    width: 300px;
+    height: 230px;
   }
   .card__principal {
-    width: 295px;
-    height: 380px;
+    width: 300px;
+    height: 390px;
   }
 
   .card__paragraph {
     font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .comunities-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .card-secondary {
+    width: 342px;
+    height: 226px;
+  }
+
+  .comunities__secondary--container {
+    gap: 0.85rem;
+  }
+
+  .card__principal {
+    width: 341px;
+    height: 466px;
+  }
+  .comunities-container {
+    gap: 0.85rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-secondary {
+    width: 420px;
+    height: 250px;
+  }
+
+  .comunities__secondary--container {
+    gap: 0.5rem;
+  }
+
+  .card__principal {
+    width: 420px;
+    height: 508px;
+  }
+  .comunities-container {
+    gap: 0.5rem;
+  }
+
+  .card__paragraph {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .card-secondary {
+    width: 500px;
+    height: 280px;
+  }
+
+  .comunities__secondary--container {
+    gap: 0.3rem;
+  }
+
+  .card__principal {
+    width: 500px;
+    height: 565px;
+  }
+  .comunities-container {
+    gap: 0.3rem;
+  }
+
+  .card__paragraph {
+    font-size: 19px;
   }
 }
