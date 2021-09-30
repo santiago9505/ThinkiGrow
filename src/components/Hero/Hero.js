@@ -16,12 +16,18 @@ const Hero = () => {
         </div>
       </article>
       <div className="fig__container">
-        <figure className="fig__1"></figure>
-        <figure className="fig__2"></figure>
-        <figure className="fig__3"></figure>
-        <figure className="fig__4"></figure>
-        <figure className="fig__5"></figure>
-        <figure className="fig__6"></figure>
+        <div className="group__container1">
+          <figure className="fig__long fig__1"></figure>
+          <figure className="fig__short fig__2"></figure>
+        </div>
+        <div className="group__container2">
+          <figure className="fig__long fig__3"></figure>
+          <figure className="fig__circle fig__4"></figure>
+        </div>
+        <div className="group__container3">
+          <figure className="fig__long fig__5"></figure>
+          <figure className="fig__short fig__6"></figure>
+        </div>
       </div>
     </section>
   );

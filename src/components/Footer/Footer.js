@@ -11,8 +11,13 @@ import Twitter from "../../assets/static/twitter-icon.png";
 const Footer = () => {
   return (
     <footer className="footer">
-      <article>
+      <article className="logo">
         <h1>THINKIGROW</h1>
+        <img
+          className="icon"
+          src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/Group%20200%20(1).svg?alt=media&token=a148dfec-1aae-45e6-945a-c64dc865b055"
+          alt="logo"
+        />
       </article>
       <div className="social__media">
         <figure>

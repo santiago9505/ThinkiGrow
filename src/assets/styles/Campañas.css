@@ -1,176 +1,223 @@
 .campañas {
-  background-color: #0c1430;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  color: white;
-}
-
-.campañas__title {
   text-align: center;
+  color: white;
+  gap: 2rem;
+  margin: 1rem 0;
 }
 
-.image__campaña--container {
-  width: 100%;
-  height: 40%;
+.carousel {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 0 1.5rem 2rem 1.5rem;
 }
 
-.each__campaña {
+#carousel::-webkit-scrollbar {
+  height: 0.4rem;
+  background-color: #1c193f;
+}
+
+#carousel::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #637b9d;
+}
+
+#carousel::-webkit-scrollbar-thumb:hover {
+  background-color: #4f678a;
+}
+
+.campañas__title--container {
+  margin-top: 1rem;
+}
+
+.campaña {
+  width: 273px;
+  height: 347px;
+  background-color: #5c5c5c;
+  color: white;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #5c5c5c;
-  margin: 1rem;
-  height: 22.8rem;
-  max-width: 20rem;
-  min-width: 17rem;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.project__logo {
+.logo__campaña {
   position: absolute;
-  right: 0.5rem;
-  top: 0.5rem;
-  background-color: grey;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 10rem;
+  top: 1rem;
+  right: 1rem;
 }
 
-.each__campaña--paragraph {
+.campaña__information {
   background-color: #1c193f;
-  margin-top: 3rem;
-  padding: 1rem 1rem 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  font-family: "Roboto";
+  height: 50%;
 }
 
-.each__campaña--complete {
-  background-color: #1c193f;
-  margin-top: 3rem;
-  padding: 1rem 1rem 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  font-family: "Roboto";
-  color: white;
-  max-height: 13rem;
+.campaña__image--container {
+  height: 50%;
 }
 
-.project__title {
+.project-img {
   width: 100%;
-  color: white;
+  height: 100%;
+  object-fit: cover;
 }
 
-.each__campaña--paragraph p {
-  font-style: normal;
-  font-weight: lighter;
-  line-height: 16.41px;
+.campaña__information {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0.1rem 0.7rem;
+}
+
+.campaña__paragraph {
   text-align: justify;
-  color: white;
+}
+
+.text__bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
 .progress__bar {
-  border-radius: 10rem;
   width: 100%;
-  height: 16px;
-  display: flex;
-  align-items: center;
-  position: relative;
+  height: 13.21px;
   border: 1px solid #ffdd00;
-}
-
-.recolected {
-  position: absolute;
-  bottom: -1.2rem;
-  right: -1rem;
-  font-size: 10px;
-  color: white;
-}
-
-.goal {
-  position: absolute;
-  bottom: -1.03rem;
-  right: 0;
-  font-size: 10px;
-  color: white;
-}
-
-.bar {
-  width: 48%;
-  height: 10px;
+  border-radius: 50px;
   display: flex;
-  justify-content: end;
-  border-radius: 10rem;
-  outline: 3px solid #ffdd00;
+  align-items: center;
+}
+
+.progress__thumb {
+  width: 40%;
+  height: 13.21px;
+  border: 2px solid #ffdd00;
+  border-radius: 50px;
   position: relative;
 }
 
-.viewProject {
-  background-color: #1c193f;
-  padding: 0 0 0.5rem 0;
-  display: flex;
-  justify-content: center;
-}
-
-.viewProject button {
-  width: 10rem;
-  height: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 0.13rem;
-  border: 2px solid #ffdd00;
-  border-radius: 3rem;
-  background-color: transparent;
-  color: white;
-}
-
-.noneProject {
-  display: none;
-}
-
-.elipse__container img {
-  width: 1.2rem;
-  height: 1.2rem;
-  z-index: 1;
+.progress__circle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: gray;
+  box-sizing: content-box;
+  border: 4px solid white;
   position: absolute;
-  right: -0.5rem;
+  right: 0;
+  top: 0;
+  transform: translate(50%, -38%);
 }
 
-.elipse__container {
-  align-items: center;
-  display: flex;
-  justify-content: flex-end;
+.campaña__button {
+  background-color: #1c193f;
+  border: 2px solid #ffdd00;
+  border-radius: 20px;
+  font-size: 12px;
+  width: 150px;
+  height: 22px;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.campaña__button:hover {
+  background-color: #393466;
+  transition: 0.5s;
 }
 
 @media (min-width: 368px) {
-  .each__campaña--paragraph {
-    gap: 1.5rem;
+  .campaña {
+    width: 278px;
+    height: 360px;
+  }
+  .campaña__information h1 {
+    font-size: 20px;
   }
 
-  .project__title {
-    font-size: 1.2rem;
-  }
-
-  .each__campaña--complete p {
-    font-size: 0.8rem;
+  .campaña__paragraph {
+    font-size: 13px;
   }
 }
 
 @media (min-width: 768px) {
-  .campañas__container {
-    display: grid;
-    grid-template-rows: repeat(2, minmax(0, 1fr));
-    grid-template-columns: 1fr 1fr;
+  .campaña {
+    width: 290px;
+    height: 372px;
+  }
+  .campaña__information h1 {
+    font-weight: 600;
+    font-size: 21px;
   }
 
-  .project__text--description {
+  .campaña__paragraph {
+    font-size: 14px;
+  }
+
+  .progress__bar {
+    height: 15px;
+    border: 2px solid #ffdd00;
+  }
+
+  .progress__thumb {
+    width: 40%;
+    height: 15px;
+    border: 3px solid #ffdd00;
+  }
+
+  .campaña__button {
+    width: 150px;
+    height: 26px;
+    color: white;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .campaña {
+    width: 400px;
+    height: 500px;
+  }
+
+  .campaña__information {
+    padding: 1.3rem;
+  }
+
+  .campaña__information h1 {
+    font-size: 24px;
+  }
+
+  .campaña__paragraph {
     font-size: 16px;
+  }
+
+  .text__bar {
+    gap: 1.2rem;
+  }
+
+  .progress__bar {
+    height: 20px;
+    border: 2px solid #ffdd00;
+  }
+
+  .campaña__button {
+    width: 180px;
+    height: 30px;
+    color: white;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .campaña__button {
+    width: 200px;
+    height: 35px;
+    font-weight: 500;
+    font-size: 18px;
   }
 }

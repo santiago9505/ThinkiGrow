@@ -114,7 +114,20 @@
   animation: fadeIn 2s;
 }
 
+.icon {
+  width: 2rem;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
 .logo__container {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
   font-size: 20px;
   padding: 0.4rem;
   color: white;
@@ -127,6 +140,13 @@
     width: 50%;
   }
 
+  .logo__container {
+    gap: 0.5rem;
+  }
+  .icon {
+    width: 2.4rem;
+  }
+
   .list__item--log-in-icon {
     width: 27px;
     height: 27px;
@@ -137,12 +157,21 @@
 @media (min-width: 768px) {
   .header {
     height: 15vh;
+    max-height: 110px;
   }
   .header__items--container-open {
     height: 66vh;
     align-items: flex-start;
     text-align: start;
   }
+
+  .logo__container {
+    gap: 0.5rem;
+  }
+  .icon {
+    width: 2.7rem;
+  }
+
   .list__items--container {
     padding: 2rem;
     gap: 2rem;
@@ -175,6 +204,14 @@
   .header {
     display: flex;
     justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  .logo__container {
+    gap: 0.6rem;
+  }
+  .icon {
+    width: 3.1rem;
   }
 
   .hamburger-react {
@@ -217,5 +254,14 @@
     color: white;
     font-weight: 500;
     font-style: normal;
+  }
+}
+
+@media (min-width: 1280px) {
+  .logo__container {
+    gap: 0.8rem;
+  }
+  .icon {
+    width: 3.3rem;
   }
 }

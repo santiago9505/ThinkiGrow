@@ -6,6 +6,7 @@
   color: white;
   padding: 2rem;
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .social__media {
@@ -46,6 +47,9 @@
 
 .cita {
   font-size: 14px;
+}
+
+.logo {
 }
 @media (min-width: 768px) {
   .footer {

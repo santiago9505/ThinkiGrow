@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem;
+  gap: 1rem;
 }
 
 .comunities-container {
@@ -19,7 +20,7 @@
 
 .comunities__title {
   color: white;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .card__text {
@@ -88,6 +89,36 @@
 .start {
   font-size: 1rem;
 }
+
+.button__comunities--container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.button__comunities--container button {
+  background-color: #1c193f;
+  color: white;
+  border: 2px solid #ffdd00;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button__comunities--container button:hover {
+  background: #393466;
+  transition: 0.5s;
+}
+
+.arrow {
+  width: 2rem;
+}
+
 @media (min-width: 368px) {
   .card-secondary {
     width: 300px;
@@ -126,6 +157,13 @@
   .comunities-container {
     gap: 0.85rem;
   }
+
+  .button__comunities--container button {
+    width: 10rem;
+    height: 2.1rem;
+    border-radius: 3rem;
+    border: 3px solid #ffdd00;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -149,6 +187,11 @@
   .card__paragraph {
     font-size: 19px;
   }
+
+  .button__comunities--container button {
+    font-size: 16px;
+    height: 2.3rem;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -171,5 +214,11 @@
 
   .card__paragraph {
     font-size: 19px;
+  }
+
+  .button__comunities--container button {
+    width: 15rem;
+    height: 2.5rem;
+    font-size: 20px;
   }
 }
