@@ -2,7 +2,8 @@ import React from "react";
 //styles
 import "../../assets/styles/Hero.css";
 
-const Hero = () => {
+const Hero = ({ isOpen, setOpen }) => {
+  console.log(isOpen);
   return (
     <section className="hero">
       <article className="hero__text">

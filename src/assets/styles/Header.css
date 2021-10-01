@@ -74,7 +74,7 @@
 }
 
 .list__items--container a:hover {
-  color: #88edf3;
+  color: #f0e71f;
   transition: 0.5s;
 }
 
@@ -152,6 +152,16 @@
     height: 27px;
     border-radius: 50%;
   }
+
+  .header__items--container-open {
+    height: 305px;
+  }
+}
+
+@media (min-width: 560px) {
+  .header__items--container-open {
+    height: 326px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -160,7 +170,8 @@
     max-height: 110px;
   }
   .header__items--container-open {
-    height: 66vh;
+    top: 4.3rem;
+    height: 480px;
     align-items: flex-start;
     text-align: start;
   }

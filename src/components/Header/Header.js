@@ -43,19 +43,34 @@ const Header = () => {
         }
       >
         <li className="list__items--container">
-          <a href="/">
-            REGÍSTRATE <img src={Icon1} className="list__item--log-in-icon" />
-          </a>
+          <Link to="sign-up">
+            REGÍSTRATE{" "}
+            <img
+              src={Icon1}
+              className="list__item--log-in-icon"
+              alt="registrarse"
+            />
+          </Link>
         </li>
         <li className="list__items--container">
-          <a href="/">
-            GRUPOS <img src={Icon2} className="list__item--log-in-icon" />
-          </a>
+          <Link to="/">
+            COMUNIDADES{" "}
+            <img
+              src={Icon2}
+              className="list__item--log-in-icon"
+              alt="COMUNIDADES"
+            />
+          </Link>
         </li>
         <li className="list__items--container">
-          <a href="/">
-            CAMPAÑAS <img src={Icon3} className="list__item--log-in-icon" />
-          </a>
+          <Link href="/">
+            CAMPAÑAS{" "}
+            <img
+              src={Icon3}
+              className="list__item--log-in-icon"
+              alt="campañas"
+            />
+          </Link>
         </li>
         <li className="list__items--campaign">
           <a href="/" className="header__button">

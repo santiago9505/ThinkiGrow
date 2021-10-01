@@ -32,7 +32,7 @@
   display: none;
   cursor: pointer;
   background-color: #1c193f;
-  border: 3px solid #ffdd00;
+  border: 2px solid #ffdd00;
 }
 
 .call__to-action:hover {
@@ -181,6 +181,7 @@
   }
 
   .fig__container {
+    margin-top: 0rem;
   }
 
   .fig__long {
@@ -227,42 +228,42 @@
   }
 
   .hero__call-to-action {
-    width: 90%;
+    width: 80%;
   }
 
   .call__to-action {
     height: 3rem;
-    margin-left: 1rem;
+
     transition: 0.8s;
   }
 
   .call__to-action:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   .fig__container {
     width: 45%;
-    height: 115%;
-    margin-top: -2rem;
+    height: 100%;
+    margin-top: -1rem;
     padding: 0 2rem;
   }
 
   .fig__long {
-    width: 7rem;
-    height: 18rem;
+    width: 6rem;
+    height: 16rem;
   }
 
   .fig__short {
-    width: 6.3rem;
+    width: 6rem;
   }
 
   .fig__circle {
-    width: 6.3rem;
-    height: 6.3rem;
+    width: 6rem;
+    height: 6rem;
   }
 
   .fig__3 {
-    margin-top: 5rem;
+    margin-top: 2rem;
   }
 
   .group__container1 {
@@ -284,29 +285,30 @@
   }
 
   .call__to-action {
-    width: 25rem;
-    height: 52px;
-    font-size: 20px;
+    width: 20rem;
+    height: 40px;
+    font-size: 18px;
   }
   .hero__text {
     width: 50%;
   }
 
   .fig__container {
+    width: 35rem;
   }
 
   .fig__long {
-    width: 8rem;
-    height: 20rem;
+    width: 7rem;
+    height: 18rem;
   }
 
   .fig__short {
-    width: 8rem;
-    height: 12rem;
+    width: 7rem;
+    height: 11rem;
   }
 
   .fig__circle {
-    width: 8rem;
-    height: 8rem;
+    width: 7rem;
+    height: 7rem;
   }
 }

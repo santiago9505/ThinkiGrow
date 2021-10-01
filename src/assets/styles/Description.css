@@ -95,7 +95,7 @@
     width: 8rem;
     height: 2rem;
     border-radius: 3rem;
-    border: 3px solid #ffdd00;
+    border: 2px solid #ffdd00;
   }
 }
 
@@ -149,8 +149,8 @@
   }
 
   .description__button {
-    width: 15rem;
-    height: 2.5rem;
-    font-size: 20px;
+    width: 12rem;
+    height: 2rem;
+    font-size: 18px;
   }
 }
