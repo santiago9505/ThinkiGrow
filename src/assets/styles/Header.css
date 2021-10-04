@@ -133,6 +133,8 @@
   color: white;
   font-weight: 500;
   font-style: normal;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 @media (min-width: 368px) {

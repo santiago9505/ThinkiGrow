@@ -161,7 +161,7 @@
 
   .button__comunities--container button {
     width: 10rem;
-    height: 2.1rem;
+    height: 32px;
     border-radius: 3rem;
     border: 2px solid #ffdd00;
   }
@@ -219,7 +219,6 @@
 
   .button__comunities--container button {
     width: 15rem;
-    height: 34px;
-    font-size: 20px;
+    font-size: 18px;
   }
 }

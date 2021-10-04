@@ -18,16 +18,20 @@ const Header = () => {
     setOpen(!isOpen);
   };
 
+  const hideMenu = () => {
+    setOpen(false);
+  };
+
   return (
     <header className={isOpen ? "header menu__open" : "header"}>
-      <figure className="logo__container">
+      <Link to="/" className="logo__container">
         <h1>ThinkiGrow</h1>
         <img
           className="icon"
           src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/Group%20200%20(1).svg?alt=media&token=a148dfec-1aae-45e6-945a-c64dc865b055"
           alt="logo"
         />
-      </figure>
+      </Link>
       <Hamburger
         className="menu-icon"
         onClick={handleClick}
@@ -43,7 +47,7 @@ const Header = () => {
         }
       >
         <li className="list__items--container">
-          <Link to="sign-up">
+          <Link onClick={hideMenu} to="sign-up">
             REGÍSTRATE{" "}
             <img
               src={Icon1}
@@ -53,7 +57,7 @@ const Header = () => {
           </Link>
         </li>
         <li className="list__items--container">
-          <Link to="/">
+          <Link onClick={hideMenu} to="/">
             COMUNIDADES{" "}
             <img
               src={Icon2}
@@ -63,7 +67,7 @@ const Header = () => {
           </Link>
         </li>
         <li className="list__items--container">
-          <Link href="/">
+          <Link onClick={hideMenu} href="/">
             CAMPAÑAS{" "}
             <img
               src={Icon3}

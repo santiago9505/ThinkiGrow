@@ -1,4 +1,5 @@
 .sign {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,6 +11,7 @@
   width: 90%;
   background-color: #1c193f;
   padding: 1rem;
+  max-width: 450px;
 }
 
 .sign__title--container {
@@ -36,7 +38,12 @@
 }
 
 .indicative {
-  width: 3rem;
+  width: 6rem;
+  background-color: #433e7e;
+  border: none;
+  height: 1.5rem;
+  padding: 0 0.3rem;
+  color: white;
 }
 
 .span {
@@ -48,11 +55,120 @@
 .signup__input {
   background-color: #433e7e;
   border: none;
-  height: 1.3rem;
+  height: 1.5rem;
   color: white;
   padding: 0 0.3rem;
 }
 
+.signup__input--phone {
+  background-color: #433e7e;
+  border: none;
+  width: 100%;
+  height: 1.5rem;
+  padding: 0 0.3rem;
+  color: white;
+}
+
+.signup__input--phone::placeholder {
+  color: white;
+}
+
+.indicative::placeholder {
+  color: white;
+}
+
 .signup__input::placeholder {
   color: white;
+}
+
+.button__container--signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.register__button {
+  border: 2px solid #ffdd00;
+  background-color: #0c1430;
+  border-radius: 20px;
+  width: 160px;
+  height: 32px;
+  color: white;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.register__button:hover {
+  background: #393466;
+  transition: 0.5s;
+}
+
+.input {
+  font-size: 14px;
+}
+
+.input::placeholder {
+  font-size: 14px;
+}
+
+.communities__close {
+  display: none;
+}
+
+.communities__open {
+  display: flex;
+}
+
+@media (min-width: 368px) {
+  .signup__form {
+    gap: 2rem;
+  }
+  .input {
+    font-size: 16px;
+  }
+
+  .input::placeholder {
+    font-size: 16px;
+  }
+
+  .indicative {
+    height: 2rem;
+  }
+
+  .signup__input {
+    background-color: #433e7e;
+    border: none;
+    height: 2rem;
+    color: white;
+    padding: 0 0.3rem;
+  }
+
+  .signup__input--phone {
+    background-color: #433e7e;
+    border: none;
+    width: 100%;
+    height: 2rem;
+    padding: 0 0.3rem;
+    color: white;
+  }
+}
+
+@media (min-width: 768px) {
+  .sign__square {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+  }
+  .signup__form {
+    max-width: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.register__button {
+  font-size: 16px;
+  height: 34px;
 }
