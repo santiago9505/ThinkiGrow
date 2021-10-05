@@ -57,7 +57,7 @@ const Header = () => {
           </Link>
         </li>
         <li className="list__items--container">
-          <Link onClick={hideMenu} to="/">
+          <Link onClick={hideMenu} to="/communities">
             COMUNIDADES{" "}
             <img
               src={Icon2}

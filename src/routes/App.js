@@ -6,8 +6,8 @@ import Footer from "../components/Footer/Footer";
 import Sign from "../pages/Sign";
 import Login from "../pages/Login";
 import PrivateRoute from "../pages/PrivateRoute";
-import Privada from "../pages/Privada";
 import { AuthProvider } from "../auth/Auth";
+import CommunitiesPage from "../pages/CommunitiesPage";
 
 function App({ isOpen, setOpen }) {
   console.log(isOpen);
@@ -26,15 +26,15 @@ function App({ isOpen, setOpen }) {
             <Route exact path="/sign-up">
               <Sign />
             </Route>
-            <Login exact path="/login">
-              <Sign />
-            </Login>
-            <PrivateRoute exact path="/private">
-              <Sign />
-            </PrivateRoute>
-            <Privada exact path="/privada">
-              <Sign />
-            </Privada>
+            <Route exact path="/communities">
+              <CommunitiesPage />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/privada">
+              <PrivateRoute />
+            </Route>
           </Switch>
           <Footer />
         </Router>

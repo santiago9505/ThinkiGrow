@@ -3,28 +3,27 @@ import React from "react";
 //styles
 import "../../assets/styles/Comunities.css";
 
-//static
-import EnglishGroup from "../../assets/static/englishGroup.jpg";
-import EnglishLogo from "../../assets/static/english-flag.png";
-
-const CardPrincipal = () => {
+const CardPrincipal = ({
+  imageUrl,
+  imageLogo,
+  name,
+  goal,
+  paragraph,
+  start,
+}) => {
   return (
     <div className="card__principal">
       <figure className="card__image">
-        <img className="image__group" src={EnglishGroup} alt="card__image" />
+        <img className="image__group" src={imageUrl} alt="card__image" />
       </figure>
       <figure className="logo__image--container">
-        <img className="project-logo" src={EnglishLogo} alt="logo" />
+        <img className="project-logo" src={imageLogo} alt="logo" />
       </figure>
       <article className="card__text principal__card--text">
-        <h2>BASIC ENGLISH</h2>
-        <h3>Objetivo: Llegar a nivel B1.</h3>
-        <p className="card__paragraph">
-          En esta comunidad tendrás la oportunidad de aprender y practicar
-          inglés, todo lo hablamos en inglés, nadie corrige a nadie y mucho
-          menos te vamos a juzgar.
-        </p>
-        <p className="start">Inicia el 03 de Octubre</p>
+        <h2>{name}</h2>
+        <h3>Objetivo: {goal}.</h3>
+        <p className="card__paragraph">{paragraph}</p>
+        <p className="start">{start}</p>
       </article>
     </div>
   );

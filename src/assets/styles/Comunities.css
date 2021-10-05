@@ -13,6 +13,22 @@
   gap: 1.5rem;
 }
 
+.comunities-container:hover .card-secondary {
+  opacity: 0.5;
+}
+
+.comunities-container:hover .card__principal {
+  opacity: 0.5;
+}
+
+.comunities-container:hover .card-secondary:hover {
+  opacity: 1;
+}
+
+.comunities-container:hover .card__principal:hover {
+  opacity: 1;
+}
+
 .comunities__secondary--container {
   display: flex;
   flex-direction: column;
@@ -52,6 +68,14 @@
   align-items: flex-end;
   position: relative;
   z-index: 2;
+  border: 1px solid transparent;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.card-secondary:hover {
+  border-color: white;
+  transition: 0.5s;
 }
 
 .logo__image--container {
@@ -61,6 +85,7 @@
 }
 
 .project-logo {
+  object-fit: cover;
   width: 46px;
   height: 46px;
   background-color: #c4c4c4;
@@ -79,6 +104,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.5s;
+}
+
+.card__principal:hover {
+  border-color: white;
+  transition: 0.5s;
+}
+
+.card__image {
+  width: 100%;
+  height: 50%;
 }
 
 .image__group {
@@ -170,7 +208,7 @@
 @media (min-width: 1024px) {
   .card-secondary {
     width: 420px;
-    height: 250px;
+    height: 251.5px;
   }
 
   .comunities__secondary--container {
@@ -196,21 +234,16 @@
 }
 
 @media (min-width: 1280px) {
-  .card-secondary {
-    width: 500px;
-    height: 280px;
-  }
-
-  .comunities__secondary--container {
-    gap: 0.3rem;
-  }
-
   .card__principal {
-    width: 500px;
-    height: 565px;
+    width: 420px;
+    height: 519px;
   }
+  .comunities__secondary--container {
+    gap: 1rem;
+  }
+
   .comunities-container {
-    gap: 0.3rem;
+    gap: 1rem;
   }
 
   .card__paragraph {
