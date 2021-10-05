@@ -1,33 +1,40 @@
-import React, { useState, useCallback } from "react";
-import { withRouter } from "react-router";
+import React, { useContext, useCallback } from "react";
+import { withRouter, Redirect } from "react-router";
 import app from "../firebase";
+import { AuthContext } from "../auth/Auth";
 
 //styles
-import "../assets/styles/Sign.css";
 
-const Sign = ({ history }) => {
-  const handleSignUp = useCallback(
+const Login = ({ history }) => {
+  const handleLogin = useCallback(
     async (event) => {
       event.preventDefault();
       const { email, password } = event.target.elements;
       try {
         await app
           .auth()
-          .createUserWithEmailAndPassword(email.value, password.value);
-        history.push("/privada");
+          .signInWithEmailAndPassword(email.value, password.value);
+        history.push("/");
       } catch (error) {
         alert(error);
       }
     },
     [history]
   );
+
+  const { currentUser } = useContext(AuthContext);
+
+  if (currentUser) {
+    return <Redirect to="/" />;
+  }
+
   return (
     <div className="sign">
       <div className="sign__square">
         <article className="sign__title--container">
-          <h1>REGÍSTRATE</h1>{" "}
+          <h1>Ingresa</h1>{" "}
         </article>
-        <form onSubmit={handleSignUp} className="signup__form" action="">
+        <form onSubmit={handleLogin} className="signup__form" action="">
           <label className="signup__question" htmlFor="">
             <span className="span">
               <img
@@ -69,4 +76,4 @@ const Sign = ({ history }) => {
   );
 };
 
-export default withRouter(Sign);
+export default withRouter(Login);
