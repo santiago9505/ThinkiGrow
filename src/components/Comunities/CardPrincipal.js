@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 //styles
 import "../../assets/styles/Comunities.css";
@@ -12,7 +13,7 @@ const CardPrincipal = ({
   start,
 }) => {
   return (
-    <div className="card__principal">
+    <Link to="/project" className="card__principal">
       <figure className="card__image">
         <img className="image__group" src={imageUrl} alt="card__image" />
       </figure>
@@ -25,7 +26,7 @@ const CardPrincipal = ({
         <p className="card__paragraph">{paragraph}</p>
         <p className="start">{start}</p>
       </article>
-    </div>
+    </Link>
   );
 };
 

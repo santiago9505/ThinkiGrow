@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Sign from "../pages/Sign";
+import Project from "../pages/Project";
 import Login from "../pages/Login";
 import PrivateRoute from "../pages/PrivateRoute";
 import { AuthProvider } from "../auth/Auth";
@@ -28,6 +29,9 @@ function App({ isOpen, setOpen }) {
             </Route>
             <Route exact path="/communities">
               <CommunitiesPage />
+            </Route>
+            <Route exact path="/project">
+              <Project />
             </Route>
             <Route exact path="/login">
               <Login />
