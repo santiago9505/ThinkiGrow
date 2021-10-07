@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 //styles
 import "../../assets/styles/Hero.css";
 
 const Hero = ({ isOpen, setOpen }) => {
-  console.log(isOpen);
   return (
     <section className="hero">
       <article className="hero__text">
@@ -13,7 +14,9 @@ const Hero = ({ isOpen, setOpen }) => {
           vidas, o crea un proyecto al que todos quieran sumarse
         </p>
         <div className="call__container">
-          <button class="call__to-action">ÚNETE A UNA COMUNIDAD</button>
+          <Link to="/communities">
+            <button class="call__to-action">ÚNETE A UNA COMUNIDAD</button>
+          </Link>
         </div>
       </article>
       <div className="fig__container">

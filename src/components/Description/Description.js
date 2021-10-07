@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 //styles
 import "../../assets/styles/Description.css";
@@ -26,9 +27,9 @@ const Description = () => {
           conecta a las personas con comunidades de investigación, aprendizaje o
           temas positivos con un impacto
         </p>
-        <div>
+        <Link to="communities">
           <button className="description__button">UNIRSE</button>
-        </div>
+        </Link>
       </div>
       <div className="description__item">
         <article className="description__item--title">
