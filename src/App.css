@@ -75,3 +75,16 @@ h3 {
 
 @media (min-width: 1280px) {
 }
+
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 34px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+} ;

@@ -15,25 +15,6 @@ const Description = () => {
       <div className="description__item">
         <article className="description__item--title">
           <h1>
-            ÚNETE A <br />
-            UN PROYECTO
-          </h1>
-        </article>
-        <figure className="description__img-container">
-          <img className="img" src={World} alt="voluntario" />
-        </figure>
-        <p className="description__paragraph">
-          Únete a la comunidad más importante del mundo hispanohablante, que
-          conecta a las personas con comunidades de investigación, aprendizaje o
-          temas positivos con un impacto
-        </p>
-        <Link to="communities">
-          <button className="description__button">UNIRSE</button>
-        </Link>
-      </div>
-      <div className="description__item">
-        <article className="description__item--title">
-          <h1>
             APOYA <br /> CAUSAS
           </h1>
         </article>
@@ -66,6 +47,26 @@ const Description = () => {
         <div>
           <button className="description__button">CREAR</button>
         </div>
+      </div>
+      <div className="description__item">
+        <article className="description__item--title">
+          <h1>
+            CREA UNA
+            <br />
+            CAUSA SOCIAL
+          </h1>
+        </article>
+        <figure className="description__img-container">
+          <img className="img" src={World} alt="voluntario" />
+        </figure>
+        <p className="description__paragraph">
+          Crea una causa social que tenga un impacto medible, nosotros
+          ayudaremos a que el mundo la conozca y que las personas puedan
+          aportar.
+        </p>
+        <Link to="communities">
+          <button className="description__button"></button>
+        </Link>
       </div>
     </div>
   );
