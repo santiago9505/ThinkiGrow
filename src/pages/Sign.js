@@ -2,29 +2,33 @@ import React, { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 import app from "../firebase";
+import Modal from "../components/Modals/SignupModal.js";
 
 //styles
 import "../assets/styles/Sign.css";
 
 const Sign = ({ history }) => {
-  const handleSignUp = useCallback(
-    async (event) => {
-      event.preventDefault();
-      const { email, password } = event.target.elements;
-      try {
-        await app
-          .auth()
-          .createUserWithEmailAndPassword(email.value, password.value);
-        history.push("/");
-      } catch (error) {
-        alert(error);
-      }
-    },
-    [history]
-  );
+  const [modal, setModal] = useState(false);
+
+  const onRegister = () => {
+    setModal(true);
+  };
+
+  const handleSignUp = useCallback(async (event) => {
+    event.preventDefault();
+    const { email, password } = event.target.elements;
+    try {
+      await app
+        .auth()
+        .createUserWithEmailAndPassword(email.value, password.value);
+      onRegister();
+    } catch (error) {
+      alert(error);
+    }
+  });
   return (
     <div className="sign">
-      <div className="sign__square">
+      <div className={modal ? "sign__square--blur" : "sign__square"}>
         <article className="sign__title--container">
           <h1>REGÍSTRATE</h1>{" "}
         </article>
@@ -71,6 +75,7 @@ const Sign = ({ history }) => {
           </div>
         </form>
       </div>
+      <Modal modal={modal} setModal={setModal} />
     </div>
   );
 };

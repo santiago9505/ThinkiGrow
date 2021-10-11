@@ -33,7 +33,7 @@ const Login = ({ history }) => {
     <div className="sign">
       <div className="sign__square">
         <article className="sign__title--container">
-          <h1>Ingresa</h1>{" "}
+          <h1>INGRESAR</h1>{" "}
         </article>
         <form onSubmit={handleLogin} className="signup__form" action="">
           <label className="signup__question" htmlFor="">

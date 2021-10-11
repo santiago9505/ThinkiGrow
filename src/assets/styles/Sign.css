@@ -14,6 +14,15 @@
   max-width: 450px;
 }
 
+.sign__square--blur {
+  color: white;
+  width: 90%;
+  background-color: #1c193f;
+  padding: 1rem;
+  max-width: 450px;
+  filter: blur(4px);
+}
+
 .sign__title--container {
   display: flex;
   justify-content: center;

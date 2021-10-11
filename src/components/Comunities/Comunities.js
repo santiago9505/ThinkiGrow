@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import CardSecondary from "./CardSecondary";
 import CardPrincipal from "./CardPrincipal";
@@ -7,6 +7,20 @@ import CardPrincipal from "./CardPrincipal";
 import "../../assets/styles/Comunities.css";
 
 const Comunities = () => {
+  const [communities, setCommunities] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    const url =
+      "https://thinkigrow-development-default-rtdb.firebaseio.com/communities.json";
+    const data = await fetch(url);
+    const communities = await data.json();
+    setCommunities(communities);
+    console.log(communities);
+  };
   return (
     <div className="comunities">
       <article className="comunities__title">
@@ -19,8 +33,8 @@ const Comunities = () => {
         </div>
         <div className="comunities__principal--container">
           <CardPrincipal
-            imageUrl="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/englishGroup.jpg?alt=media&token=941fb038-4216-42f0-80f0-5c29ede0fe82"
-            imageLogo="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/english-flag1.png?alt=media&token=826b8bb9-1cd9-4fbe-a12a-2526ec81a6ee"
+            imageUrl={communities.image}
+            imageLogo={communities.url}
             name="Basic English"
             goal="Get to B2"
             paragraph="En esta comunidad tendrás la oportunidad de aprender y practicar inglés, todo lo hablamos en inglés, nadie corrige a nadie y mucho menos te vamos a juzgar."

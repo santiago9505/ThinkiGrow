@@ -1,0 +1,31 @@
+.modal {
+  position: absolute;
+  background-color: #1c193f;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  opacity: 2;
+  text-align: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+}
+
+.modal__close {
+  display: none;
+}
+
+.btn {
+  background-color: #1c193f;
+  color: white;
+  text-decoration: none;
+  width: 100px;
+  padding: 0.5rem;
+  border: 2px solid #f0e71f;
+  border-radius: 20px;
+  margin-top: 1rem;
+}
