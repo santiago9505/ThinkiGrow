@@ -1,4 +1,5 @@
 import React, { useContext, useCallback } from "react";
+import { Link } from "react-router-dom";
 import { withRouter, Redirect } from "react-router";
 import app from "../firebase";
 import { AuthContext } from "../auth/Auth";
@@ -25,7 +26,7 @@ const Login = ({ history }) => {
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
-    return <Redirect to="/" />;
+    return <Redirect to="/privada" />;
   }
 
   return (
@@ -67,8 +68,11 @@ const Login = ({ history }) => {
               required
             />
           </label>
+          <span>
+            No estás registrado ? Regístrate <Link to="sign-up">aquí</Link>
+          </span>
           <div className="button__container--signup">
-            <button className="register__button">REGISTRARSE</button>
+            <button className="register__button">Ingresar</button>
           </div>
         </form>
       </div>

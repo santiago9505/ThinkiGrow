@@ -56,6 +56,7 @@
 .list__items--container {
   width: 60%;
   height: 2rem;
+  display: block;
 }
 
 .list__items--container a {
@@ -76,6 +77,21 @@
 .list__items--container a:hover {
   color: #f0e71f;
   transition: 0.5s;
+}
+
+.profile-hide {
+  display: none;
+}
+
+.profile__icon--login {
+  width: 200px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: greenyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 @keyframes fadeIn {

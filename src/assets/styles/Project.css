@@ -104,6 +104,59 @@
   gap: 0.5rem;
 }
 
+.project__info--carousel {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 0 1.5rem 2rem 1.5rem;
+  margin: 1rem;
+}
+
+#project__carousel::-webkit-scrollbar {
+  height: 0.4rem;
+  background-color: #1c193f;
+}
+
+#project__carousel::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #637b9d;
+}
+
+#project__carousel::-webkit-scrollbar-thumb:hover {
+  background-color: #4f678a;
+}
+
+.schedule__card {
+  background-color: #433e7e;
+  width: 276px;
+  height: 396px;
+  text-align: start;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.project__card--info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project__card--item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.item__info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 @media (min-width: 768px) {
   .project__image--container {
     width: 150px;
@@ -116,10 +169,38 @@
 
   .more__data {
     width: 70%;
-    align-items: center;
   }
 
   .more__information {
     width: 100%;
+  }
+
+  .date.complete {
+    width: 70%;
+  }
+
+  .more__data {
+    padding-left: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .basic__data {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .project__text--information {
+    text-align: start;
+  }
+
+  .schedule__card {
+    background-color: #433e7e;
+    width: 380px;
+    height: 550px;
+    padding: 1.7rem 2.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }

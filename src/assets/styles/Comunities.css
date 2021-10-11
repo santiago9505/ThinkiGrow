@@ -41,11 +41,13 @@
 }
 
 .card__text {
+  background-color: rgb(105, 104, 104);
+  opacity: 0.9;
   color: white;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 1rem 1rem;
+  padding: 1rem;
 }
 
 .background__image {
@@ -191,7 +193,7 @@
 
   .card__principal {
     width: 341px;
-    height: 500px;
+    height: 464px;
   }
   .comunities-container {
     gap: 0.85rem;

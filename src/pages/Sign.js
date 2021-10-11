@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from "react";
+import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 import app from "../firebase";
 
@@ -14,7 +15,7 @@ const Sign = ({ history }) => {
         await app
           .auth()
           .createUserWithEmailAndPassword(email.value, password.value);
-        history.push("/privada");
+        history.push("/");
       } catch (error) {
         alert(error);
       }
@@ -60,6 +61,11 @@ const Sign = ({ history }) => {
               required
             />
           </label>
+          <div>
+            <span>
+              Ya tienes una cuenta ? Ingresa <Link to="login">aquí</Link>
+            </span>
+          </div>
           <div className="button__container--signup">
             <button className="register__button">REGISTRARSE</button>
           </div>

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Turn as Hamburger } from "hamburger-react";
+import { AuthContext } from "../../auth/Auth";
 
 //styles
 import "../../assets/styles/Header.css";
@@ -10,9 +11,11 @@ import Icon2 from "../../assets/static/menu-icon2.png";
 import Icon3 from "../../assets/static/menu-icon3.png";
 
 import { Link } from "react-router-dom";
+import app from "../../firebase";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
+  const { currentUser } = useContext(AuthContext);
 
   const handleClick = () => {
     setOpen(!isOpen);
@@ -33,7 +36,7 @@ const Header = () => {
         />
       </Link>
       <Hamburger
-        className="menu-icon"
+        className={currentUser ? "profile-hide" : "list__items--container"}
         onClick={handleClick}
         color="#fff"
         toggled={isOpen}
@@ -46,7 +49,7 @@ const Header = () => {
           isOpen ? "header__items--container-open" : "header__items--container"
         }
       >
-        <li className="list__items--container">
+        <li className={currentUser ? "profile-hide" : "list__items--container"}>
           <Link onClick={hideMenu} to="sign-up">
             REGÍSTRATE{" "}
             <img
@@ -56,7 +59,7 @@ const Header = () => {
             />
           </Link>
         </li>
-        <li className="list__items--container">
+        <li className={currentUser ? "profile-hide" : "list__items--container"}>
           <Link onClick={hideMenu} to="/communities">
             COMUNIDADES{" "}
             <img
@@ -66,14 +69,26 @@ const Header = () => {
             />
           </Link>
         </li>
-        <li className="list__items--container">
-          <Link onClick={hideMenu} href="/">
+        <li className={currentUser ? "profile-hide" : "list__items--container"}>
+          <Link onClick={hideMenu} to="/">
             CAMPAÑAS{" "}
             <img
               src={Icon3}
               className="list__item--log-in-icon"
               alt="campañas"
             />
+          </Link>
+        </li>
+        <li className={currentUser ? "list__items--container" : "profile-hide"}>
+          <Link onClick={hideMenu} to="/">
+            <div className="profile__icon--login">
+              PERFIL <img src="" alt="Foto" />
+            </div>
+          </Link>
+        </li>
+        <li className={currentUser ? "list__items--container" : "profile-hide"}>
+          <Link onClick={() => app.auth().signOut()} to="/">
+            <div className="profile__icon--login">Logout</div>
           </Link>
         </li>
         <li className="list__items--campaign">

@@ -1,4 +1,5 @@
 import React from "react";
+import ProjectCard from "../components/ProjectCard";
 
 //styles
 import "../assets/styles/Project.css";
@@ -97,6 +98,9 @@ const Project = () => {
             </article>
           </article>
         </div>
+        <article>
+          <h1>OBJETIVOS</h1>
+        </article>
         <div className="section about__project">
           <article className="general__goal">
             <h3>Objetivo General</h3>
@@ -120,6 +124,14 @@ const Project = () => {
               inglesa, tales como libros, artículos, noticias, entre otros
             </p>
           </article>
+        </div>
+        <article>
+          <h1>PROGRAMACIÓN MENSUAL</h1>
+        </article>
+        <div id="project__carousel" className="project__info--carousel">
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
         </div>
       </div>
     </div>
