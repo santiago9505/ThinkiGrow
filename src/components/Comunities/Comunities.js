@@ -17,9 +17,9 @@ const Comunities = () => {
     const url =
       "https://thinkigrow-development-default-rtdb.firebaseio.com/communities.json";
     const data = await fetch(url);
-    const communities = await data.json();
-    setCommunities(communities);
-    console.log(communities);
+    const projects = await data.json();
+    setCommunities(projects);
+    console.log(communities["01"]);
   };
   return (
     <div className="comunities">
@@ -33,8 +33,8 @@ const Comunities = () => {
         </div>
         <div className="comunities__principal--container">
           <CardPrincipal
-            imageUrl={communities.image}
-            imageLogo={communities.url}
+            // imageUrl={communities["01"].logo}
+            // imageLogo={communities["01"].logo}
             name="Basic English"
             goal="Get to B2"
             paragraph="En esta comunidad tendrás la oportunidad de aprender y practicar inglés, todo lo hablamos en inglés, nadie corrige a nadie y mucho menos te vamos a juzgar."

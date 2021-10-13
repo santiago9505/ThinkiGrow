@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import "../../assets/styles/Hero.css";
 
 const Hero = ({ isOpen, setOpen }) => {
+  console.log(isOpen);
   return (
     <section className="hero">
       <article className="hero__text">
