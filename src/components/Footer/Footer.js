@@ -33,31 +33,31 @@ const Footer = () => {
       <ul className="footer__items">
         <div className="footer__group">
           <li>
-            <a className="footer__title" href="">
+            <a className="footer__title" href="/">
               Conecta ahora
             </a>
           </li>
           <li>
-            <a href="">Únete a una comunidad</a>
+            <a href="/">Únete a una comunidad</a>
           </li>
           <li>
-            <a href="">Apoya a causas</a>
+            <a href="/">Apoya a causas</a>
           </li>
           <li>
-            <a href="">Crea un Proyecto</a>
+            <a href="/">Crea un Proyecto</a>
           </li>
         </div>
         <div className="footer__group">
           <li>
-            <a className="footer__title" href="">
+            <a className="footer__title" href="/">
               Conócenos
             </a>
           </li>
           <li>
-            <a href="">Regístrate</a>
+            <a href="/">Regístrate</a>
           </li>
           <li>
-            <a href="">Contáctanos</a>
+            <a href="/">Contáctanos</a>
           </li>
         </div>
       </ul>

@@ -77,8 +77,7 @@
 }
 
 .more__data--items {
-  display: flex;
-  justify-content: start;
+  display: flex-start;
   align-items: center;
   text-align: start;
   padding: 0.3rem;

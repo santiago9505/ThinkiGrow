@@ -57,9 +57,6 @@
   align-items: center;
 }
 @media (min-width: 768px) {
-  .footer {
-  }
-
   .footer__items {
     display: grid;
     grid-template-columns: 1fr 1fr;

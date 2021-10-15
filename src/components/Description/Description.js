@@ -1,11 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 //styles
 import "../../assets/styles/Description.css";
 
 //images
-import World from "../../assets/static/1stIcon.png";
 import Project from "../../assets/static/2ndIcon.png";
 import Donations from "../../assets/static/3rdIcon.png";
 
@@ -15,58 +13,55 @@ const Description = () => {
       <div className="description__item">
         <article className="description__item--title">
           <h1>
-            APOYA <br /> CAUSAS
+            ÚNETE A UNA
+            <br /> COMUNIDAD
           </h1>
         </article>
         <figure className="description__img-container">
           <img className="img" src={Donations} alt="voluntario" />
         </figure>
         <p className="description__paragraph">
-          Aporta a causas que ayudan al medio ambiente, educación y erradicación
-          de la pobreza. Nosotros damos un seguimiento para que tu aporte cumpla
-          el objetivo. La unión hace la fuerza!
+          Haz parte de una comunidad, donde podrás practicar, aprender, crear y
+          rodearte de personas que comparten tus mismos intereses.
         </p>
         <div>
-          <button className="description__button">APORTAR</button>
+          <button className="description__button">ÚNETE</button>
         </div>
       </div>
       <div className="description__item">
         <article className="description__item--title">
           <h1>
-            CREA UN <br /> PROYECTO
+            CREA UNA <br /> COMUNIDAD
           </h1>
         </article>
         <figure className="description__img-container">
           <img className="img" src={Project} alt="voluntario" />
         </figure>
         <p className="description__paragraph">
-          Crea un proyecto al que todos quieran sumarse, si tienes una idea, un
-          emprendimiento o una causa, nosotros te ayudamos a que el mundo la
-          conozca y a que las personas se puedan unir
+          Muestra tu proyecto, si tienes una idea de un emprendimiento o una
+          causa social, nosotros te apoyamos para que el mundo la conozca y las
+          personas se puedan unir.
         </p>
         <div>
-          <button className="description__button">CREAR</button>
+          <button className="description__button">CREA</button>
         </div>
       </div>
       <div className="description__item">
         <article className="description__item--title">
           <h1>
-            CREA UNA
-            <br />
-            CAUSA SOCIAL
+            FINANCIA <br /> CAUSAS SOCIALES
           </h1>
         </article>
         <figure className="description__img-container">
-          <img className="img" src={World} alt="voluntario" />
+          <img className="img" src={Donations} alt="voluntario" />
         </figure>
         <p className="description__paragraph">
-          Crea una causa social que tenga un impacto medible, nosotros
-          ayudaremos a que el mundo la conozca y que las personas puedan
-          aportar.
+          Apoya a comunidades que crean soluciones para el medio ambiente,
+          educación y erradicación de la pobreza.
         </p>
-        <Link to="communities">
-          <button className="description__button"></button>
-        </Link>
+        <div>
+          <button className="description__button">AYUDA</button>
+        </div>
       </div>
     </div>
   );
