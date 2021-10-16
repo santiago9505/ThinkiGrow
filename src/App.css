@@ -1,6 +1,16 @@
 /*roboto 400*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+:root{
+  --white-principal: #FEFEFE;
+  --purple-principal-background: #1C193F;
+  --blue-second-background: #0C1430;
+  --yellow-principal: #FFDD00;
+  --grey-dark: #5C5C5C;
+  --violet-menu-dark: #19022C;
+  --button-input-form: #433E7E;
+}
+
 * {
   margin: 0;
   padding: 0;
