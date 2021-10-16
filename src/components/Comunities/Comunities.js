@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import CardSecondary from "./CardSecondary";
 import CardPrincipal from "./CardPrincipal";
@@ -7,7 +8,11 @@ import CardPrincipal from "./CardPrincipal";
 import "../../assets/styles/Comunities.css";
 
 const Comunities = () => {
-  const [communities, setCommunities] = useState([]);
+  const [principal, setPrincipal] = useState([]);
+  const [secondary, setSecondary] = useState([]);
+  const [third, setThird] = useState([]);
+
+  let { community } = useParams();
 
   useEffect(() => {
     getData();
@@ -18,8 +23,25 @@ const Comunities = () => {
       "https://thinkigrow-development-default-rtdb.firebaseio.com/communities.json";
     const data = await fetch(url);
     const projects = await data.json();
-    setCommunities(projects["01"]);
+    gettingPrincipalAndSecondary(projects);
   };
+
+  const gettingPrincipalAndSecondary = (projects) => {
+    for (let i = 0; i < projects.length; i++) {
+      if (projects[i].third) {
+        setThird(projects[i]);
+      } else if (projects[i].secondary) {
+        setSecondary(projects[i]);
+      } else if (projects[i].principal) {
+        setPrincipal(projects[i]);
+      } else {
+        continue;
+      }
+    }
+  };
+
+  console.log(third);
+
   return (
     <div className="comunities">
       <article className="comunities__title">
@@ -27,18 +49,27 @@ const Comunities = () => {
       </article>
       <div className="comunities-container">
         <div className="comunities__secondary--container">
-          <CardSecondary />
-          <CardSecondary />
+          <CardSecondary
+            imageUrl={secondary.image}
+            imageLogo={secondary.logo}
+            name={secondary.name}
+            paragraph={secondary.description}
+          />
+          <CardSecondary
+            imageUrl={third.image}
+            imageLogo={third.logo}
+            name={third.name}
+            paragraph={third.description}
+          />
         </div>
         <div className="comunities__principal--container">
           <CardPrincipal
-            id={communities.id}
-            imageUrl={communities.image}
-            imageLogo={communities.logo}
-            name={communities.name}
-            goal={communities.goal}
-            paragraph={communities.description}
-            start={communities.start}
+            imageUrl={principal.image}
+            imageLogo={principal.logo}
+            name={principal.name}
+            goal="get to b2"
+            paragraph={principal.description}
+            start={principal.start}
           />
         </div>
       </div>

@@ -4,7 +4,7 @@ import ProjectCard from "../components/ProjectCard";
 //styles
 import "../assets/styles/Project.css";
 
-const Project = () => {
+const Project = ({ name }) => {
   return (
     <div className="project">
       <div className="project__container">
@@ -16,7 +16,7 @@ const Project = () => {
             />
           </figure>
           <article className="project__text--information">
-            <h1>NOMBRE COMUNIDAD</h1>
+            <h1>{name}</h1>
             <h3>Rol de usuario</h3>
             <p className="project__paragraph">
               “Deseamos practicar Inglés en un nivel A1 - B1, el listening, el

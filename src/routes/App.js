@@ -30,7 +30,7 @@ function App({ isOpen, setOpen }) {
             <Route exact path="/communities">
               <CommunitiesPage />
             </Route>
-            <Route exact path="/project">
+            <Route exact path="/project/:community">
               <Project />
             </Route>
             <Route exact path="/login">

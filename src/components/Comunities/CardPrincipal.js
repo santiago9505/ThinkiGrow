@@ -13,7 +13,7 @@ const CardPrincipal = ({
   start,
 }) => {
   return (
-    <Link to="/project" className="card__principal">
+    <Link to={`/project/${name}`} className="card__principal">
       <figure className="card__image">
         <img className="image__group" src={imageUrl} alt="card__image" />
       </figure>
