@@ -12,8 +12,6 @@ const Comunities = () => {
   const [secondary, setSecondary] = useState([]);
   const [third, setThird] = useState([]);
 
-  let { community } = useParams();
-
   useEffect(() => {
     getData();
   }, []);
@@ -50,12 +48,14 @@ const Comunities = () => {
       <div className="comunities-container">
         <div className="comunities__secondary--container">
           <CardSecondary
+            id={secondary.id}
             imageUrl={secondary.image}
             imageLogo={secondary.logo}
             name={secondary.name}
             paragraph={secondary.description}
           />
           <CardSecondary
+            id={third.id}
             imageUrl={third.image}
             imageLogo={third.logo}
             name={third.name}
@@ -64,6 +64,7 @@ const Comunities = () => {
         </div>
         <div className="comunities__principal--container">
           <CardPrincipal
+            id={principal.id}
             imageUrl={principal.image}
             imageLogo={principal.logo}
             name={principal.name}

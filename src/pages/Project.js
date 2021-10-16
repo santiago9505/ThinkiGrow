@@ -1,27 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
+import { useParams } from "react-router";
 
 //styles
 import "../assets/styles/Project.css";
 
-const Project = ({ name }) => {
+const Project = () => {
+  const [communities, setCommunities] = useState([]);
+  const { id } = useParams();
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    const url = `https://thinkigrow-development-default-rtdb.firebaseio.com/communities/${id}.json`;
+    const data = await fetch(url);
+    const projects = await data.json();
+    setCommunities(projects);
+  };
+
   return (
     <div className="project">
       <div className="project__container">
         <div className="basic__data section">
           <figure className="project__image--container">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/englishGroup.jpg?alt=media&token=941fb038-4216-42f0-80f0-5c29ede0fe82"
-              alt="logo-project"
-            />
+            <img src={communities.image} alt="logo-project" />
           </figure>
           <article className="project__text--information">
-            <h1>{name}</h1>
+            <h1>{}</h1>
             <h3>Rol de usuario</h3>
-            <p className="project__paragraph">
-              “Deseamos practicar Inglés en un nivel A1 - B1, el listening, el
-              writing y el reading”
-            </p>
+            <p className="project__paragraph">{communities.description}</p>
           </article>
         </div>
         <article>
@@ -51,7 +60,7 @@ const Project = ({ name }) => {
               Creador del grupo
             </h3>
             <article className="more__information">
-              <p className="date complete">Pepito Perez</p>
+              <p className="date complete">{communities.creator}</p>
             </article>
           </article>
           <article>

@@ -33,6 +33,7 @@ const CommunitiesPage = () => {
         {communities.map((item) => {
           return (
             <CardPrincipal
+              id={item.id}
               imageUrl={item.image}
               imageLogo={item.logo}
               name={item.name}
