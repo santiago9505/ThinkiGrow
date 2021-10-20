@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 //styles
 import "../../assets/styles/Description.css";
@@ -25,7 +26,9 @@ const Description = () => {
           rodearte de personas que comparten tus mismos intereses.
         </p>
         <div>
-          <button className="description__button">ÚNETE</button>
+          <Link to="/communities">
+            <button className="description__button">ÚNETE</button>
+          </Link>
         </div>
       </div>
       <div className="description__item">
@@ -43,13 +46,15 @@ const Description = () => {
           personas se puedan unir.
         </p>
         <div>
-          <button className="description__button">CREA</button>
+          <Link to="/create">
+            <button className="description__button">CREA</button>
+          </Link>
         </div>
       </div>
       <div className="description__item">
         <article className="description__item--title">
           <h1>
-            FINANCIA <br /> CAUSAS SOCIALES
+            FINANCIA <br /> CAMPAÑAS
           </h1>
         </article>
         <figure className="description__img-container">

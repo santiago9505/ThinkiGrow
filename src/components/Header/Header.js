@@ -43,46 +43,65 @@ const Header = () => {
           isOpen ? "header__items--container-open" : "header__items--container"
         }
       >
+        <li className={currentUser ? "list__items--container" : "profile-hide"}>
+          <Link className="link" onClick={hideMenu} to="/">
+            <div className="profile__icon--login">
+              PERFIL{" "}
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/user-tie-icon.svg?alt=media&token=81a23b56-5058-4543-bd4b-687aaab725fa"
+                alt="Foto"
+              />
+            </div>
+          </Link>
+        </li>
+        <li className="list__items--container">
+          <Link className="link" onClick={hideMenu} to="/communities">
+            COMUNIDADES{" "}
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/Group%20(2).svg?alt=media&token=6ca9861b-028e-416d-b1c5-d005ad993436"
+              className="list__item--log-in-icon"
+              alt="comunidades"
+            />
+          </Link>
+        </li>
+        <li className="list__items--container">
+          <Link className="link" onClick={hideMenu} to="/">
+            CAMPAÑAS{" "}
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/Vector%20(1).svg?alt=media&token=9525a05a-c112-40aa-b972-8dac59725477"
+              className="list__item--log-in-icon"
+              alt="campañas"
+            />
+          </Link>
+        </li>
         <li className={currentUser ? "profile-hide" : "list__items--container"}>
-          <Link onClick={hideMenu} to="sign-up">
+          <Link className="link" onClick={hideMenu} to="sign-up">
             REGÍSTRATE{" "}
             <img
-              src={Icon1}
+              src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/register-icon.svg?alt=media&token=08db2d07-d527-4369-b086-ef749110cab4"
               className="list__item--log-in-icon"
               alt="registrarse"
             />
           </Link>
         </li>
         <li className={currentUser ? "profile-hide" : "list__items--container"}>
-          <Link onClick={hideMenu} to="/communities">
-            COMUNIDADES{" "}
+          <Link className="link" onClick={hideMenu} to="login">
+            INGRESAR{" "}
             <img
-              src={Icon2}
+              src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/login.svg?alt=media&token=0fbe57f9-f493-4b29-a9ca-b33ec9cc4a35"
               className="list__item--log-in-icon"
-              alt="COMUNIDADES"
+              alt="ingresar"
             />
           </Link>
         </li>
-        <li className={currentUser ? "profile-hide" : "list__items--container"}>
-          <Link onClick={hideMenu} to="/">
-            CAMPAÑAS{" "}
+
+        <li className={currentUser ? "list__items--container" : "profile-hide"}>
+          <Link className="link" onClick={() => app.auth().signOut()} to="/">
+            <div className="profile__icon--logout">SALIR</div>
             <img
-              src={Icon3}
-              className="list__item--log-in-icon"
-              alt="campañas"
+              src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/logout-icon.svg?alt=media&token=d416e909-63e8-45fb-9adb-f2c8c3324931"
+              alt=""
             />
-          </Link>
-        </li>
-        <li className={currentUser ? "list__items--container" : "profile-hide"}>
-          <Link onClick={hideMenu} to="/">
-            <div className="profile__icon--login">
-              PERFIL <img src="" alt="Foto" />
-            </div>
-          </Link>
-        </li>
-        <li className={currentUser ? "list__items--container" : "profile-hide"}>
-          <Link onClick={() => app.auth().signOut()} to="/">
-            <div className="profile__icon--login">Logout</div>
           </Link>
         </li>
         <li className="list__items--campaign">

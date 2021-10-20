@@ -28,7 +28,7 @@ const Project = () => {
             <img src={communities.image} alt="logo-project" />
           </figure>
           <article className="project__text--information">
-            <h1>{}</h1>
+            <h1>{communities.name}</h1>
             <h3>Rol de usuario</h3>
             <p className="project__paragraph">{communities.description}</p>
           </article>

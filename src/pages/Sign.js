@@ -71,9 +71,39 @@ const Sign = ({ history }) => {
             </span>
           </div>
           <div className="button__container--signup">
-            <button className="register__button">REGISTRARSE</button>
+            <button className="register__button">Registrarse</button>
           </div>
         </form>
+        <hr />
+        <div className="section__metamask">
+          <article className="metamask__register--signup">
+            <h2>Regístrate con Metamask</h2>
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/metamask-icon.svg?alt=media&token=34728a3b-ea01-4779-8c50-1741b754c764"
+              alt="metamas-icon"
+            />
+          </article>
+          <p>Para descargar metamask haz click aquí</p>
+          <div className="video__container">
+            <iframe
+              width="360"
+              height="235"
+              src="https://www.youtube.com/embed/Lwmx_DO77_M"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <article>
+            <p>Si ya tienes metamask ingresa con un sólo click</p>
+          </article>
+          <div className="button__container--signup">
+            <button className="register__metamask">
+              Registrarse con Metamask
+            </button>
+          </div>
+        </div>
       </div>
       <Modal modal={modal} setModal={setModal} />
     </div>

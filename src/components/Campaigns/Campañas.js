@@ -9,7 +9,7 @@ const Campaign = () => {
   return (
     <div className="campañas">
       <article className="campañas__title--container">
-        <h1>CAUSAS SOCIALES</h1>
+        <h1>CAMPAÑAS</h1>
       </article>
       <div id="carousel" className="carousel">
         <EachCampaña />

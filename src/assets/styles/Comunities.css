@@ -73,6 +73,7 @@
   border: 1px solid transparent;
   transition: 0.5s;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .card-secondary:hover {
@@ -109,6 +110,7 @@
   cursor: pointer;
   border: 1px solid transparent;
   transition: 0.5s;
+  text-decoration: none;
 }
 
 .card__principal:hover {
@@ -204,6 +206,10 @@
     height: 32px;
     border-radius: 3rem;
     border: 2px solid #ffdd00;
+  }
+
+  .image__group {
+    height: 250px;
   }
 }
 

@@ -11,7 +11,7 @@ const Home = () => {
       <Hero />
       <Description />
       <Comunities />
-      <Campañas />
+      {/* <Campañas /> */}
     </>
   );
 };

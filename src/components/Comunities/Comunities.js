@@ -38,8 +38,6 @@ const Comunities = () => {
     }
   };
 
-  console.log(third);
-
   return (
     <div className="comunities">
       <article className="comunities__title">
@@ -68,7 +66,7 @@ const Comunities = () => {
             imageUrl={principal.image}
             imageLogo={principal.logo}
             name={principal.name}
-            goal="get to b2"
+            goal={principal.goal}
             paragraph={principal.description}
             start={principal.start}
           />
@@ -76,14 +74,7 @@ const Comunities = () => {
       </div>
       <div className="button__comunities--container">
         <Link to="/communities">
-          <button>
-            VER MÁS
-            <img
-              className="arrow"
-              src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/Arrow%201.svg?alt=media&token=64b286b9-6edf-49ca-97b8-7c7adebe6afc"
-              alt="flecha"
-            />
-          </button>
+          <button>VER COMUNIDADES</button>
         </Link>
       </div>
     </div>

@@ -9,6 +9,7 @@ import Login from "../pages/Login";
 import PrivateRoute from "../pages/PrivateRoute";
 import { AuthProvider } from "../auth/Auth";
 import CommunitiesPage from "../pages/CommunitiesPage";
+import CreateCommunity from "../pages/CreateCommunity";
 
 function App({ isOpen, setOpen }) {
   console.log(isOpen);
@@ -38,6 +39,9 @@ function App({ isOpen, setOpen }) {
             </Route>
             <Route exact path="/privada">
               <PrivateRoute />
+            </Route>
+            <Route exact path="/create">
+              <CreateCommunity />
             </Route>
           </Switch>
           <Footer />
