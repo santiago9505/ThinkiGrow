@@ -1,8 +1,205 @@
 .project{
   padding: 20px;
 }
+
+/*BASIC DATA*/
+
 .project__container{
-  background-color: var(--violet-menu-dark);
-  padding: 20px;
+  background-color: var(--purple-principal-background);
+  padding: 30px;
   border-radius: 4px;
+}
+.basic__data{
+  background-color: var(--purple-cards);
+  padding: 15px;
+}
+.project__image--container{
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+.project__image--container img{
+  width: 200px;
+  height: 200px;
+  border-radius: 110px;
+  border:10px solid var(--white-principal);
+}
+.project__text--information{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white-principal);
+}
+.project__text--information h2 + p{
+  font-weight: bold;
+}
+.project__text--information h2{
+  margin-top: 25px;
+}
+.project__text--information p{
+  margin-top: 10px;
+}
+.project__text--information .project__paragraph{
+  text-align: center;
+}
+
+/*INFORMATION DATA*/
+
+.infomation__data{
+  display: flex;
+  flex-direction: column;
+}
+
+/*INFORMATION DATA __ ONE SECTION*/
+
+.information__data--oneSection{
+  display: flex;
+  flex-direction: column;
+}
+
+/*INFORMATION DATA __ ONE SECTION -- GROUP DATA*/
+.oneSection__groupData{
+  display: flex;
+  flex-direction: column;
+}
+.oneSection__groupData--tittle h2{
+  margin: 15px 0 15px 0;
+  text-align: center;
+  color: var(--white-principal);
+}
+.oneSection__groupData--info{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--purple-cards);
+  padding: 15px;
+  gap: 12px;
+}
+.gruopData__info--date div{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.gruopData__info--date div .info__date--logoDate{
+  width: 40px;
+  height: 40px;
+  background: url("https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/Frame%2019.svg?alt=media&token=b124f86c-7165-4b21-924f-3f2257a462a7") no-repeat;
+  background-position: center;
+}
+.gruopData__info--date div p{
+  color: var(--white-principal);
+}
+.gruopData__info--date > p{
+  font-weight: bold;
+  color: var(--white-principal);
+  margin-left: 8px;
+}
+/*--------*/
+.gruopData__info--location div{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.gruopData__info--location div .info__date--logoLocation{
+  width: 40px;
+  height: 40px;
+  background: url("https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/Frame%2019.svg?alt=media&token=b124f86c-7165-4b21-924f-3f2257a462a7") no-repeat;
+  background-position: center;
+}
+.gruopData__info--location div p{
+  color: var(--white-principal);
+}
+.gruopData__info--location > p{
+  font-weight: bold;
+  color: var(--white-principal);
+  margin-left: 8px;
+}
+/*--------*/
+.gruopData__info--admin div{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.gruopData__info--admin div .info__date--logoAdmin{
+  width: 40px;
+  height: 40px;
+  background: url("https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/user-tie%20(1).svg?alt=media&token=7674c92c-b5be-4f1f-90f1-1c4f41399005") no-repeat;
+  background-position: center;
+}
+.gruopData__info--admin div p{
+  color: var(--white-principal);
+}
+.gruopData__info--admin > p{
+  font-weight: bold;
+  color: var(--white-principal);
+  margin-left: 8px;
+}
+/*--------*/
+.gruopData__info--adminEmail div{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.gruopData__info--adminEmail div .info__date--logoEmail{
+  width: 40px;
+  height: 40px;
+  background: url("https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/Group%20187.svg?alt=media&token=4ea1d4f6-aa34-4ccc-bba7-0f0c8dd57138") no-repeat;
+  background-position: center;
+}
+.gruopData__info--adminEmail div p{
+  color: var(--white-principal);
+}
+.gruopData__info--adminEmail > p{
+  font-weight: bold;
+  color: var(--white-principal);
+  margin-left: 8px;
+}
+/*--------*/
+.gruopData__info--adminPhone div{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.gruopData__info--adminPhone div .info__date--logoPhone{
+  width: 40px;
+  height: 40px;
+  background: url("https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/Group.svg?alt=media&token=d2f617dd-7c8e-49be-9540-a3646258c098") no-repeat;
+  background-position: center;
+}
+.gruopData__info--adminPhone div p{
+  color: var(--white-principal);
+}
+.gruopData__info--adminPhone > p{
+  font-weight: bold;
+  color: var(--white-principal);
+  margin-left: 8px;
+}
+/*--------*/
+.gruopData__info--socialNet div{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.gruopData__info--socialNet div .info__date--logoSocialNet{
+  width: 40px;
+  height: 40px;
+  background: url("https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/Frame%2022.svg?alt=media&token=68458c3c-5805-4aaf-9aac-c864349e5ba8") no-repeat;
+  background-position: center;
+}
+.gruopData__info--socialNet div p{
+  color: var(--white-principal);
+}
+.info__socialNet--container{
+  margin-left: 4px;
+}
+.socialNet--container--discord{
+  width: 40px;
+  height: 40px;
+  background: url("https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/Discord%20-%20Negative.svg?alt=media&token=b21f05d9-4cf1-45cd-8075-3272598791a1") no-repeat;
+  background-position: center;
+}
+.socialNet--container--whatsapp{
+  width: 40px;
+  height: 40px;
+  background: url("https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/Group%20236.svg?alt=media&token=e3cc355a-e3fb-4265-8117-57cd70506482") no-repeat;
+  background-position: center;
 }

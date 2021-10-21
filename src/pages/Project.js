@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
 
@@ -9,16 +10,15 @@ const Project = ({ name }) => {
     <section className="project">
       <div className="project__container">
 
-        <section className="basic__data section">
+        <section className="basic__data">
           <figure className="project__image--container">
             <img src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/englishGroup.jpg?alt=media&token=941fb038-4216-42f0-80f0-5c29ede0fe82"
               alt="logo-project" />
           </figure>
           <div className="project__text--information">
-            <h2>{name}</h2>
+            <h2>Basic English</h2>{/*poner el {name}*/}
             <p>Rol del usuario</p>
-            <p className="project__paragraph">“Deseamos practicar Inglés en un nivel A1 - B1, el listening, el
-              writing y el reading”</p>
+            <p className="project__paragraph">En esta comunidad tendrás la oportunidad de aprender y practicar inglés, todo lo hablamos en inglés, nadie corrige a nadie y mucho menos te vamos a juzgar.</p>
           </div>
         </section>
 
@@ -69,11 +69,13 @@ const Project = ({ name }) => {
                     <div className="info__date--logoSocialNet"></div>
                     <p>Canales</p>
                   </div>
-                  <div href="#" className="socialNet__discord">
-                    <div className="socialNet__discord--logo"></div>
-                  </div>
-                  <div href="#" className="socialNet__whatsapp">
-                    <div className="socialNet__whatsapp--logo"></div>
+                  <div className="info__socialNet--container">
+                    <a href="#" className="socialNet--container--discord">
+                      <div className="socialNet__discord--logo"></div>
+                    </a>
+                    <a href="#" className="socialNet--container--whatsapp">
+                      <div className="socialNet__whatsapp--logo"></div>
+                    </a>
                   </div>
                 </div>
               </div>
