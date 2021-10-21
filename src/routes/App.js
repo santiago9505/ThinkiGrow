@@ -10,6 +10,7 @@ import PrivateRoute from "../pages/PrivateRoute";
 import { AuthProvider } from "../auth/Auth";
 import CommunitiesPage from "../pages/CommunitiesPage";
 import CreateCommunity from "../pages/CreateCommunity";
+import CampañasPage from "../pages/CampañasPage";
 
 function App({ isOpen, setOpen }) {
   console.log(isOpen);
@@ -30,6 +31,9 @@ function App({ isOpen, setOpen }) {
             </Route>
             <Route exact path="/communities">
               <CommunitiesPage />
+            </Route>
+            <Route exact path="/campañas">
+              <CampañasPage />
             </Route>
             <Route exact path="/project/:id">
               <Project />

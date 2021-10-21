@@ -106,6 +106,7 @@ const CreateCommunity = () => {
             type="text"
             name=""
             id=""
+            placeholder="Thinkigrow"
             required
           />
         </label>
@@ -123,6 +124,7 @@ const CreateCommunity = () => {
             type="text"
             name=""
             id=""
+            placeholder="arte, tecnología, ciencia"
             required
           />
         </label>
@@ -141,6 +143,7 @@ const CreateCommunity = () => {
             id=""
             cols="30"
             rows="5"
+            placeholder="Describe brevemente tu proyecto"
             required
           ></textarea>
         </label>
@@ -154,6 +157,7 @@ const CreateCommunity = () => {
             Número de miembros del grupo
           </span>
           <select className="create__input" name="" id="" required>
+            <option value="">Selecciona</option>
             <option value="">1</option>
             <option value="">2</option>
             <option value="">3</option>

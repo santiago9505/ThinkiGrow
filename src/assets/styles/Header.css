@@ -134,6 +134,11 @@
   border-radius: 50%;
 }
 
+.list__item--log-in-icon:hover {
+  /* filter: invert(18%) sepia(43%) saturate(550%) hue-rotate(1deg)
+    brightness(106%) contrast(109%); */
+}
+
 .header__button {
   background-color: #1c193f;
   border: none;

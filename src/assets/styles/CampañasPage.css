@@ -1,0 +1,33 @@
+.campaigns__page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-bottom: 10rem;
+}
+
+.title {
+  width: 50%;
+  text-align: center;
+}
+
+.button__container {
+  margin: 3rem 0;
+}
+
+.button__create--campaign {
+  width: 200px;
+  border: 2px solid var(--yellow-principal);
+  background-color: var(--purple-principal-background);
+  color: white;
+  border-radius: 20px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.button__create--campaign:hover {
+  background-color: var(--button-input-form);
+  transition: 0.5s;
+}

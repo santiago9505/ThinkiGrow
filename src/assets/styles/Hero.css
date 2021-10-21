@@ -85,7 +85,20 @@
 }
 
 .fig__1 {
+  position: relative;
   background: #88edf3;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__img--1 {
+  position: absolute;
+  width: 4.5rem;
+  bottom: 0rem;
+  height: 13rem;
+  object-fit: cover;
+  zoom: 90%;
+  border-radius: 10rem;
 }
 
 .fig__2 {

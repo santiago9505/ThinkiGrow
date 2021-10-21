@@ -141,10 +141,20 @@
   border: none;
   color: white;
   font-size: 16px;
+  padding: 0.5rem;
+}
+
+input::placeholder {
+  color: rgb(216, 203, 203);
+}
+
+textarea::placeholder {
+  color: rgb(216, 203, 203);
 }
 
 .small {
   height: 28px;
+  padding: 1rem;
 }
 
 .specific__form {
@@ -177,6 +187,7 @@
     align-items: center;
   }
   .create__community--sections {
+    max-width: 800px;
     padding: 0 4rem;
   }
   .form__sections {
@@ -192,6 +203,7 @@
   .create__form {
     padding: 2rem 3rem;
     gap: 1rem;
+    max-width: 800px;
   }
 
   .form__question {

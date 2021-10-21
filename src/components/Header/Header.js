@@ -7,9 +7,10 @@ import Logo from "../Logo";
 import "../../assets/styles/Header.css";
 
 //images
-import Icon1 from "../../assets/static/menu-icon1.png";
-import Icon2 from "../../assets/static/menu-icon2.png";
-import Icon3 from "../../assets/static/menu-icon3.png";
+import CommunityImg from "../../assets/static/comunidades-icon.svg";
+import CampaignsImg from "../../assets/static/campañas-icon.svg";
+import RegisterImg from "../../assets/static/registrarse-icon.svg";
+import LogoutImg from "../../assets/static/salir-icon.svg";
 
 import { Link } from "react-router-dom";
 import app from "../../firebase";
@@ -58,14 +59,14 @@ const Header = () => {
           <Link className="link" onClick={hideMenu} to="/communities">
             COMUNIDADES{" "}
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/Group%20(2).svg?alt=media&token=6ca9861b-028e-416d-b1c5-d005ad993436"
+              src={CommunityImg}
               className="list__item--log-in-icon"
               alt="comunidades"
             />
           </Link>
         </li>
         <li className="list__items--container">
-          <Link className="link" onClick={hideMenu} to="/">
+          <Link className="link" onClick={hideMenu} to="/campañas">
             CAMPAÑAS{" "}
             <img
               src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/Vector%20(1).svg?alt=media&token=9525a05a-c112-40aa-b972-8dac59725477"
