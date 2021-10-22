@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import firebase from "../firebase";
+import app from "../firebase";
 
 //styles
 import "../assets/styles/CreateCommunity.css";
 
 const CreateCommunity = () => {
   //upload image state
-  const [imageUpload, setImageUpload] = useState(
-    "https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/upload-image.svg?alt=media&token=3a1fbd20-30e0-4fd8-91ca-78bf93ee1691"
-  );
+  const [imageUpload, setImageUpload] = useState("");
   const [uploadValue, setUploadValue] = useState(0);
 
   //upload image state
@@ -16,7 +14,7 @@ const CreateCommunity = () => {
 
   const handleChange = (e) => {
     const file = e.target.files[0];
-    const storageRef = firebase.storage().ref(`/${file.name}`);
+    const storageRef = app.storage().ref(`/profile-images/${file.name}`);
     console.log(storageRef);
     const task = storageRef.put(file);
 
@@ -31,7 +29,14 @@ const CreateCommunity = () => {
         console.log(error.message);
       },
       () => {
-        //here should download the image url
+        app
+          .storage()
+          .ref("profile-images")
+          .child(file.name)
+          .getDownloadURL()
+          .then((url) => {
+            setImageUpload(url);
+          });
       }
     );
   };
@@ -45,7 +50,7 @@ const CreateCommunity = () => {
     event.preventDefault();
   };
 
-  console.log(form);
+  console.log(imageUpload);
 
   return (
     <div className="create__community">

@@ -95,6 +95,11 @@
   height: 128px;
 }
 
+.image__upload img {
+  object-fit: cover;
+  width: 100%;
+}
+
 .image__upload input {
   display: flex;
 }
@@ -173,7 +178,6 @@ textarea::placeholder {
   background-color: var(--purple-principal-background);
   border-color: var(--yellow-principal);
 }
-
 @media (min-width: 368px) {
   .create__form {
     padding: 2rem;

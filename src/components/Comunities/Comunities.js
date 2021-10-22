@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import CardSecondary from "./CardSecondary";
 import CardPrincipal from "./CardPrincipal";
@@ -13,16 +12,15 @@ const Comunities = () => {
   const [third, setThird] = useState([]);
 
   useEffect(() => {
+    const getData = async () => {
+      const url =
+        "https://thinkigrow-development-default-rtdb.firebaseio.com/communities.json";
+      const data = await fetch(url);
+      const projects = await data.json();
+      gettingPrincipalAndSecondary(projects);
+    };
     getData();
   }, []);
-
-  const getData = async () => {
-    const url =
-      "https://thinkigrow-development-default-rtdb.firebaseio.com/communities.json";
-    const data = await fetch(url);
-    const projects = await data.json();
-    gettingPrincipalAndSecondary(projects);
-  };
 
   const gettingPrincipalAndSecondary = (projects) => {
     for (let i = 0; i < projects.length; i++) {

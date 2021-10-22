@@ -10,15 +10,14 @@ const Project = () => {
   const { id } = useParams();
 
   useEffect(() => {
+    const getData = async () => {
+      const url = `https://thinkigrow-development-default-rtdb.firebaseio.com/communities/${id}.json`;
+      const data = await fetch(url);
+      const projects = await data.json();
+      setCommunities(projects);
+    };
     getData();
   }, []);
-
-  const getData = async () => {
-    const url = `https://thinkigrow-development-default-rtdb.firebaseio.com/communities/${id}.json`;
-    const data = await fetch(url);
-    const projects = await data.json();
-    setCommunities(projects);
-  };
 
   return (
     <div className="project">

@@ -69,7 +69,7 @@ const Header = () => {
           <Link className="link" onClick={hideMenu} to="/campañas">
             CAMPAÑAS{" "}
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/Vector%20(1).svg?alt=media&token=9525a05a-c112-40aa-b972-8dac59725477"
+              src={CampaignsImg}
               className="list__item--log-in-icon"
               alt="campañas"
             />
@@ -79,7 +79,7 @@ const Header = () => {
           <Link className="link" onClick={hideMenu} to="sign-up">
             REGÍSTRATE{" "}
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/register-icon.svg?alt=media&token=08db2d07-d527-4369-b086-ef749110cab4"
+              src={RegisterImg}
               className="list__item--log-in-icon"
               alt="registrarse"
             />
@@ -99,10 +99,7 @@ const Header = () => {
         <li className={currentUser ? "list__items--container" : "profile-hide"}>
           <Link className="link" onClick={() => app.auth().signOut()} to="/">
             <div className="profile__icon--logout">SALIR</div>
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/logout-icon.svg?alt=media&token=d416e909-63e8-45fb-9adb-f2c8c3324931"
-              alt=""
-            />
+            <img src={LogoutImg} alt="" />
           </Link>
         </li>
         <li className="list__items--campaign">
