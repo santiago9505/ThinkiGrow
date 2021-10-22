@@ -1,24 +1,40 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, {useEffect,useState} from "react";
 import ProjectCard from "../components/ProjectCard";
+import { useParams } from "react-router";
+
 
 //styles
 import "../assets/styles/Project.css";
 
-const Project = ({ name }) => {
+const Project = () => {
+
+  const [communities, setCommunities] = useState([]);
+  const { id } = useParams();
+
+  useEffect(() => {
+    const getData = async () => {
+      const url = `https://thinkigrow-development-default-rtdb.firebaseio.com/communities/${id}.json`;
+      const data = await fetch(url);
+      const projects = await data.json();
+      setCommunities(projects);
+    };
+    getData();
+  }, []);
+
   return (
     <section className="project">
       <div className="project__container">
 
         <section className="basic__data">
           <figure className="project__image--container">
-            <img src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/englishGroup.jpg?alt=media&token=941fb038-4216-42f0-80f0-5c29ede0fe82"
+            <img src={communities.image}
               alt="logo-project" />
           </figure>
           <div className="project__text--information">
-            <h2>Basic English</h2>{/*poner el {name}*/}
+            <h2>{communities.name}</h2>
             <p>Rol del usuario</p>
-            <p className="project__paragraph">En esta comunidad tendrás la oportunidad de aprender y practicar inglés, todo lo hablamos en inglés, nadie corrige a nadie y mucho menos te vamos a juzgar.</p>
+            <p className="project__paragraph">{communities.description}</p>
           </div>
         </section>
 
@@ -48,7 +64,7 @@ const Project = ({ name }) => {
                     <div className="info__date--logoAdmin"></div>
                     <p>Responsable del grupo</p>
                   </div>
-                  <p>Juan Jose Pepito</p>
+                  <p>{communities.creator}</p>
                 </div>
                 <div className="gruopData__info--adminEmail">
                   <div>
