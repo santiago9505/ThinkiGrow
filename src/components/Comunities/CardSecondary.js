@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 //styles
 import "../../assets/styles/Comunities.css";
 
-const CardSecondary = ({ imageUrl, imageLogo, name, paragraph }) => {
+const CardSecondary = ({ id, imageUrl, imageLogo, name, paragraph }) => {
   return (
-    <div className="card-secondary">
+    <Link to={`/project/${id}`} className="card-secondary">
       <img className="background__image" src={imageUrl} alt="background" />
       <figure className="logo__image--container">
         <img className="project-logo" src={imageLogo} alt="logo" />
@@ -14,7 +15,7 @@ const CardSecondary = ({ imageUrl, imageLogo, name, paragraph }) => {
         <h2>{name}</h2>
         <p className="card__paragraph">{paragraph}</p>
       </article>
-    </div>
+    </Link>
   );
 };
 

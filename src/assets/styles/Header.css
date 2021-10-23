@@ -87,11 +87,26 @@
   width: 200px;
   height: 40px;
   border-radius: 100px;
-  background-color: greenyellow;
+  background-color: var(--blue-second-background);
+  border: 2px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.profile__icon--login img {
+  background-color: var(--gray-dark);
+  width: 25px;
+  border-radius: 100px;
+}
+
+.link {
+  border-radius: 100px;
+}
+
+.link:hover {
+  fill: #f0e71f;
 }
 
 @keyframes fadeIn {
@@ -117,6 +132,11 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
+}
+
+.list__item--log-in-icon:hover {
+  /* filter: invert(18%) sepia(43%) saturate(550%) hue-rotate(1deg)
+    brightness(106%) contrast(109%); */
 }
 
 .header__button {
@@ -267,6 +287,14 @@
     display: flex;
     gap: 0.5rem;
     font-size: 16px;
+  }
+
+  #root > div > header > ul > li:nth-child(6) {
+    order: 2;
+  }
+
+  #root > div > header > ul > li:nth-child(1) {
+    order: 2;
   }
 
   .list__items--campaign {

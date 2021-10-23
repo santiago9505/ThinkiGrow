@@ -33,7 +33,7 @@
   display: none;
   cursor: pointer;
   background-color: #1c193f;
-  border: 2px solid #ffdd00;
+  border: 2px solid var(--yellow-principal);
 }
 
 .call__to-action:hover {
@@ -85,7 +85,20 @@
 }
 
 .fig__1 {
+  position: relative;
   background: #88edf3;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__img--1 {
+  position: absolute;
+  width: 8rem;
+  bottom: 0rem;
+  height: 18rem;
+  object-fit: cover;
+  zoom: 90%;
+  border-radius: 10rem;
 }
 
 .fig__2 {
@@ -105,6 +118,7 @@
     display: flex;
     height: 300px;
     justify-content: space-between;
+    padding: 1.5rem 1.3rem;
   }
 
   .fig__container {
@@ -246,6 +260,10 @@
     transform: scale(1.05);
   }
 
+  .fig__3 {
+    position: relative;
+  }
+
   .fig__container {
     width: 45%;
     height: 100%;
@@ -286,7 +304,7 @@
 @media (min-width: 1280px) {
   .hero {
     display: flex;
-    height: 89vh;
+    height: 600px;
     justify-content: space-around;
   }
 
@@ -316,5 +334,42 @@
   .fig__circle {
     width: 7rem;
     height: 7rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero {
+    height: 700px;
+  }
+  .fig__container {
+    width: 40rem;
+  }
+
+  .fig__long {
+    width: 8.5rem;
+    height: 21rem;
+  }
+
+  .fig__short {
+    width: 8.5rem;
+    height: 14rem;
+  }
+
+  .fig__circle {
+    width: 8.5rem;
+    height: 8.5rem;
+  }
+  .group__container1 {
+    gap: 2rem;
+  }
+  .group__container2 {
+    gap: 2rem;
+  }
+
+  .group__container3 {
+    gap: 2rem;
+  }
+  .fig__3 {
+    margin-top: 4rem;
   }
 }

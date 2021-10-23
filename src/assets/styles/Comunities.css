@@ -41,13 +41,13 @@
 }
 
 .card__text {
-  background-color: rgb(105, 104, 104);
+  background-color: rgb(88, 92, 105);
   opacity: 0.9;
   color: white;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .background__image {
@@ -66,13 +66,14 @@
 .card-secondary {
   display: flex;
   width: 276px;
-  height: 208px;
+  height: 250px;
   align-items: flex-end;
   position: relative;
   z-index: 2;
   border: 1px solid transparent;
   transition: 0.5s;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .card-secondary:hover {
@@ -102,13 +103,13 @@
   position: relative;
   width: 274px;
   height: auto;
-  background-color: #5c5c5c;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
   border: 1px solid transparent;
   transition: 0.5s;
+  text-decoration: none;
 }
 
 .card__principal:hover {
@@ -163,7 +164,7 @@
 @media (min-width: 368px) {
   .card-secondary {
     width: 300px;
-    height: 230px;
+    height: 290px;
   }
   .card__principal {
     width: 300px;
@@ -204,6 +205,10 @@
     height: 32px;
     border-radius: 3rem;
     border: 2px solid #ffdd00;
+  }
+
+  .image__group {
+    height: 250px;
   }
 }
 

@@ -6,6 +6,19 @@ import "../assets/styles/CommunitiesPage.css";
 
 const CommunitiesPage = () => {
   const [communities, setCommunities] = useState([]);
+  const [searchValue, setSearchValue] = React.useState("");
+
+  let allCommunities = [];
+
+  if (!searchValue.length > 1) {
+    allCommunities = communities;
+  } else {
+    allCommunities = communities.filter((community) => {
+      const communityName = community.name.toLowerCase();
+      const searchText = searchValue.toLowerCase();
+      return communityName.includes(searchText);
+    });
+  }
 
   useEffect(() => {
     getData();
@@ -19,20 +32,30 @@ const CommunitiesPage = () => {
     setCommunities(projects);
   };
 
-  console.log(communities);
+  const onSearchValueChange = (event) => {
+    console.log(event.target.value);
+    setSearchValue(event.target.value);
+  };
 
   return (
     <div className="communities__page">
       <article className="communities__page--title">
         <h1>COMUNIDADES</h1>
       </article>
-      <div>
-        <input type="search" />
+      <div className="search__container">
+        <input
+          onChange={onSearchValueChange}
+          placeholder="Busca una comunidad"
+          className="search__communities"
+          type="search"
+          value={searchValue}
+        />
       </div>
       <div className="communities__page--cards-container">
-        {communities.map((item) => {
+        {allCommunities.map((item) => {
           return (
             <CardPrincipal
+              id={item.id}
               imageUrl={item.image}
               imageLogo={item.logo}
               name={item.name}
