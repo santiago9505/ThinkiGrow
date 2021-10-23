@@ -118,7 +118,7 @@ const Project = () => {
             <div>
               <h2>PROGRAMACION MENSUAL</h2>
             </div>
-            <div id="project__carousel">
+            <div id="project__carousel" className="secondSection__carousel">
               <ProjectCard/>
               <ProjectCard/>
               <ProjectCard/>

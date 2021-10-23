@@ -203,3 +203,47 @@
   background: url("https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/Group%20236.svg?alt=media&token=e3cc355a-e3fb-4265-8117-57cd70506482") no-repeat;
   background-position: center;
 }
+
+/*INFORMATION DATA __ ONE SECTION -- GROUP GOALS*/
+
+.oneSection__groupGoals{
+  display: flex;
+  flex-direction: column;
+}
+.oneSection__groupGoals--title h2{
+  margin: 15px 0 15px 0;
+  text-align: center;
+  color: var(--white-principal);
+}
+.oneSection__groupGoals--info{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--purple-cards);
+  padding: 15px;
+  gap: 12px;
+}
+.oneSection__groupGoals--info h3{
+  color: var(--white-principal);
+  font-weight: bold;
+}
+.oneSection__groupGoals--info h3 + p{
+  color: var(--white-principal);
+}
+.oneSection__groupGoals--info ul{
+  padding-left: 18px;
+}
+.oneSection__groupGoals--info ul li{
+  color: var(--white-principal);
+  font-weight: lighter;
+}
+
+/*INFORMATION DATA __ SECOND SECTION */
+
+.secondSection__carousel{
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  gap: 2rem;
+  margin: 1rem;
+}
