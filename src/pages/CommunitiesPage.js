@@ -13,7 +13,7 @@ const CommunitiesPage = () => {
   if (!searchValue.length > 1) {
     allCommunities = communities;
   } else {
-    allCommunities = communities.filter((community) => {
+    allCommunities = Object.values(communities).filter((community) => {
       const communityName = community.name.toLowerCase();
       const searchText = searchValue.toLowerCase();
       return communityName.includes(searchText);

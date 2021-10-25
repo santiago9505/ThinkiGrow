@@ -17,12 +17,18 @@ const SignupModal = ({ modal, setModal }) => {
       <div className="logo">
         <Logo />
       </div>
-      <article>Rectifica tu información o sigue a la página principal</article>
-      <Link to="/">
-        <button className="btn" onClick={closeModal}>
-          CERRAR
-        </button>
-      </Link>
+      <div className="buttons">
+        <Link to="/">
+          <button className="btn home" onClick={closeModal}>
+            IR AL HOME
+          </button>
+        </Link>
+        <Link to="/communities">
+          <button className="btn" onClick={closeModal}>
+            CERRAR
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

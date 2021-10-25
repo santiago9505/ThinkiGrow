@@ -1,21 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import app from "../firebase";
+import { AuthContext } from "../auth/Auth";
+import Modal from "../components/Modals/SignupModal";
 
 //styles
 import "../assets/styles/CreateCommunity.css";
 
 const CreateCommunity = () => {
-  //upload image state
   const [imageUpload, setImageUpload] = useState("");
+  const [logoUpload, setLogoUpload] = useState("");
   const [uploadValue, setUploadValue] = useState(0);
+  const [optionSelected, setOptionSelected] = useState("");
+  const [channel1Selected, setChannel1Selected] = useState("");
+  const [channel2Selected, setChannel2Selected] = useState("");
+  const [Community, setCommunity] = useState({});
 
-  //upload image state
   const [form, setForm] = useState(0);
+
+  //currentUser
+  const { currentUser } = useContext(AuthContext);
+
+  //Modal
+  const [modal, setModal] = useState(false);
+
+  const onSubmit = () => {
+    setModal(true);
+  };
 
   const handleChange = (e) => {
     const file = e.target.files[0];
     const storageRef = app.storage().ref(`/profile-images/${file.name}`);
-    console.log(storageRef);
     const task = storageRef.put(file);
 
     task.on(
@@ -41,16 +55,168 @@ const CreateCommunity = () => {
     );
   };
 
+  const handleLogo = (e) => {
+    const file = e.target.files[0];
+    const storageRef = app.storage().ref(`/profile-images/${file.name}`);
+    const task = storageRef.put(file);
+
+    task.on(
+      "state_changed",
+      (snapshot) => {
+        let percentage =
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        setUploadValue(percentage);
+      },
+      (error) => {
+        console.log(error.message);
+      },
+      () => {
+        app
+          .storage()
+          .ref("profile-images")
+          .child(file.name)
+          .getDownloadURL()
+          .then((url) => {
+            setLogoUpload(url);
+          });
+      }
+    );
+  };
+
   const handleSubmit = (event) => {
+    const { name, about, goal, description } = event.target.elements;
     event.preventDefault();
+    basicData(name.value, about.value, goal.value, description.value);
+    setForm(form + 1);
+  };
+
+  const handleSubmitSpecific = (event) => {
+    const { start, end, location, creator, number, link1, link2 } =
+      event.target.elements;
+    event.preventDefault();
+    specificData(
+      start.value,
+      end.value,
+      location.value,
+      creator.value,
+      number.value,
+      link1.value,
+      link2.value
+    );
     setForm(form + 1);
   };
 
   const finalSubmit = (event) => {
+    const {
+      activityName,
+      activityDate,
+      activityLocation,
+      activityStart,
+      activityEnd,
+      activityDescription,
+    } = event.target.elements;
     event.preventDefault();
+    finalData(
+      activityName.value,
+      activityDate.value,
+      activityLocation.value,
+      activityStart.value,
+      activityEnd.value,
+      activityDescription.value
+    );
   };
 
-  console.log(imageUpload);
+  const handleSelect = (e) => {
+    setOptionSelected(e.target.value);
+  };
+
+  const selectedChannel1 = (e) => {
+    setChannel1Selected(e.target.value);
+  };
+
+  const selectedChannel2 = (e) => {
+    setChannel2Selected(e.target.value);
+  };
+
+  const basicData = (name, about, description, goal) => {
+    const basic = {
+      name: name,
+      about: about,
+      description: description,
+      goal: goal,
+      members: optionSelected,
+      image: imageUpload,
+      logo: logoUpload,
+      principal: false,
+      secondary: false,
+      currentUsers: 0,
+      users: {
+        "01": {
+          id: "01",
+          name: "santiago",
+        },
+        "02": {
+          id: "02",
+          name: "santiago",
+        },
+        "03": {
+          id: "03",
+          name: "santiago",
+        },
+      },
+    };
+    setCommunity(basic);
+  };
+
+  const specificData = (
+    start,
+    end,
+    location,
+    creator,
+    number,
+    link1,
+    link2
+  ) => {
+    Community["start"] = start;
+    Community["end"] = end;
+    Community["location"] = location;
+    Community["creator"] = {
+      id: currentUser.uid,
+      name: creator,
+      number: number,
+    };
+    Community["channels"] = {
+      channel1Selected: link1,
+      channel2Selected: link2,
+    };
+  };
+
+  const finalData = (
+    activityName,
+    activityDate,
+    activityLocation,
+    activityStart,
+    activityEnd,
+    activityDescription
+  ) => {
+    const communityRef = app.database().ref("communities").push();
+    const key = communityRef.key;
+
+    Community["id"] = key;
+    Community["schedule"] = {
+      firstWeek: {
+        activtyName: activityName,
+        activityDate: activityDate,
+        activityLocation: activityLocation,
+        activityStart: activityStart,
+        activityEnd: activityEnd,
+        activityDescription: activityDescription,
+      },
+    };
+
+    communityRef.set(Community);
+    onSubmit();
+  };
 
   return (
     <div className="create__community">
@@ -86,9 +252,11 @@ const CreateCommunity = () => {
               form === 2 ? "form__sections section__selected" : "form__sections"
             }
           ></div>
+
           <a href="/">Programación de actividades</a>
         </li>
       </ul>
+
       <form
         className={form === 0 ? "create__form" : "create__form basic__form"}
         onSubmit={handleSubmit}
@@ -109,8 +277,7 @@ const CreateCommunity = () => {
           <input
             className="create__input small"
             type="text"
-            name=""
-            id=""
+            name="name"
             placeholder="Thinkigrow"
             required
           />
@@ -127,9 +294,25 @@ const CreateCommunity = () => {
           <input
             className="create__input small"
             type="text"
-            name=""
-            id=""
+            name="about"
             placeholder="arte, tecnología, ciencia"
+            required
+          />
+        </label>
+        <label className="form__question" htmlFor="">
+          <span className="question__span">
+            <img
+              className="form__icon"
+              src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/tem%C3%A1tica-icon%201.svg?alt=media&token=a542191a-a27b-4ce2-b1da-855d006ca177"
+              alt="temática"
+            />
+            Objetivo
+          </span>
+          <input
+            className="create__input small"
+            type="text"
+            name="goal"
+            placeholder="Llegar a x nivel"
             required
           />
         </label>
@@ -144,8 +327,7 @@ const CreateCommunity = () => {
           </span>
           <textarea
             className="create__input text--area"
-            name=""
-            id=""
+            name="description"
             cols="30"
             rows="5"
             placeholder="Describe brevemente tu proyecto"
@@ -161,14 +343,21 @@ const CreateCommunity = () => {
             />
             Número de miembros del grupo
           </span>
-          <select className="create__input" name="" id="" required>
+          <select
+            value={optionSelected}
+            onChange={handleSelect}
+            className="create__input"
+            name="members"
+            id=""
+            required
+          >
             <option value="">Selecciona</option>
-            <option value="">1</option>
-            <option value="">2</option>
-            <option value="">3</option>
-            <option value="">4</option>
-            <option value="">5</option>
-            <option value="">6</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
           </select>
         </label>
         <label className="image__section" htmlFor="">
@@ -178,16 +367,33 @@ const CreateCommunity = () => {
           </span>
           <div className="image__upload">
             <img src={imageUpload} alt="imagen-comunidad" />
-            <input type="file" accept="image/*" onChange={handleChange} />
+            <input
+              name="image"
+              type="file"
+              accept="image/*"
+              onChange={handleChange}
+            />
             <progress value={uploadValue} max="100"></progress>
+          </div>
+        </label>
+        <label className="image__section" htmlFor="">
+          <div className="image__upload">
+            <img src={logoUpload} alt="logo-comunidad" />
+            <input
+              name="logo"
+              type="file"
+              accept="image/*"
+              onChange={handleLogo}
+            />
           </div>
         </label>
         <label className="button__first--section" htmlFor="">
           <button type="submit">Continuar</button>
         </label>
       </form>
+      <Modal modal={modal} setModal={setModal} />
       <form
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmitSpecific}
         className={form === 1 ? "create__form" : "create__form specific__form"}
         action=""
       >
@@ -206,7 +412,24 @@ const CreateCommunity = () => {
           <input
             className="create__input small"
             type="date"
-            name=""
+            name="start"
+            id=""
+            required
+          />
+        </label>
+        <label className="form__question" htmlFor="">
+          <span className="question__span">
+            <img
+              className="form__icon"
+              src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/calendar-icon.svg?alt=media&token=f4f27dce-042c-4918-9bda-9223b251c16f"
+              alt="nombre-comunidad"
+            />
+            Fecha final
+          </span>
+          <input
+            className="create__input small"
+            type="date"
+            name="end"
             id=""
             required
           />
@@ -223,7 +446,7 @@ const CreateCommunity = () => {
           <input
             className="create__input small"
             type="text"
-            name=""
+            name="location"
             id=""
             required
           />
@@ -240,7 +463,7 @@ const CreateCommunity = () => {
           <input
             className="create__input small"
             type="text"
-            name=""
+            name="creator"
             id=""
             required
           />
@@ -258,7 +481,7 @@ const CreateCommunity = () => {
           <input
             className="create__input small"
             type="text"
-            name=""
+            name="number"
             id=""
             required
           />
@@ -274,25 +497,51 @@ const CreateCommunity = () => {
           </span>
           <label className="form__question" htmlFor="">
             <span>Aplicación número 1</span>
-            <select className="create__input small" name="" id="" required>
-              <option value="">Whatsapp</option>
-              <option value="">Discord</option>
-              <option value="">Telegram</option>
-              <option value="">Signal</option>
+            <select
+              value={channel1Selected}
+              onChange={selectedChannel1}
+              className="create__input"
+              name="app1"
+              id=""
+              required
+            >
+              <option value="">Selecciona</option>
+              <option value="Whatsapp">Whatsapp</option>
+              <option value="Discord">Discord</option>
+              <option value="Telegram">Telegram</option>
+              <option value="Signal">Signal</option>
             </select>
             <span>Enlace aplicación no 1</span>
-            <input className="create__input small" type="url" required />
+            <input
+              name="link1"
+              className="create__input small"
+              type="url"
+              required
+            />
           </label>
           <label className="form__question" htmlFor="">
             <span>Aplicación número 2</span>
-            <select className="create__input small" name="" id="" required>
-              <option value="">Whatsapp</option>
-              <option value="">Discord</option>
-              <option value="">Telegram</option>
-              <option value="">Signal</option>
+            <select
+              value={channel2Selected}
+              onChange={selectedChannel2}
+              className="create__input"
+              name="app2"
+              id=""
+              required
+            >
+              <option value="">Selecciona</option>
+              <option value="Whatsapp">Whatsapp</option>
+              <option value="Discord">Discord</option>
+              <option value="Telegram">Telegram</option>
+              <option value="Signal">Signal</option>
             </select>
             <span>Enlace aplicación no 2</span>
-            <input className="create__input small" type="url" required />
+            <input
+              name="link2"
+              className="create__input small"
+              type="url"
+              required
+            />
           </label>
         </label>
         <label className="button__first--section" htmlFor="">
@@ -319,7 +568,7 @@ const CreateCommunity = () => {
           <input
             className="create__input small"
             type="text"
-            name=""
+            name="activityName"
             id=""
             required
           />
@@ -336,7 +585,7 @@ const CreateCommunity = () => {
           <input
             className="create__input small"
             type="date"
-            name=""
+            name="activityDate"
             id=""
             required
           />
@@ -353,7 +602,7 @@ const CreateCommunity = () => {
           <input
             className="create__input small"
             type="text"
-            name=""
+            name="activityLocation"
             id=""
             required
           />
@@ -370,7 +619,7 @@ const CreateCommunity = () => {
           <input
             className="create__input small"
             type="time"
-            name=""
+            name="activityStart"
             id=""
             required
           />
@@ -387,7 +636,7 @@ const CreateCommunity = () => {
           <input
             className="create__input small"
             type="time"
-            name=""
+            name="activityEnd"
             id=""
             required
           />
@@ -403,7 +652,7 @@ const CreateCommunity = () => {
           </span>
           <textarea
             className="create__input text--area"
-            name=""
+            name="activityDescription"
             id=""
             cols="30"
             rows="5"

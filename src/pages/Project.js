@@ -6,6 +6,7 @@ import { useParams } from "react-router";
 
 //styles
 import "../assets/styles/Project.css";
+import Comunities from "../components/Comunities/Comunities";
 
 const Project = () => {
 
@@ -21,6 +22,7 @@ const Project = () => {
     };
     getData();
   }, []);
+  console.log(communities);
 
   return (
     <section className="project">
@@ -37,7 +39,6 @@ const Project = () => {
             <p className="project__paragraph">{communities.description}</p>
           </div>
         </section>
-
         <section className="information__data">
           <div className="information__data--oneSection">
             <article className="oneSection__groupData">
@@ -94,7 +95,7 @@ const Project = () => {
                     </a>
                   </div>
                 </div>
-              </div>
+              </div>      
             </article>
 
             <article className="oneSection__groupGoals">
@@ -124,8 +125,6 @@ const Project = () => {
               <ProjectCard/>
             </div>
           </article>
-        </section>
-
       </div>
     </section>
   );

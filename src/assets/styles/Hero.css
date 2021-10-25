@@ -93,11 +93,10 @@
 
 .hero__img--1 {
   position: absolute;
-  width: 8rem;
+  width: 7rem;
   bottom: 0rem;
   height: 18rem;
   object-fit: cover;
-  zoom: 90%;
   border-radius: 10rem;
 }
 
