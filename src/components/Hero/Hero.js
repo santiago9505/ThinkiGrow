@@ -23,21 +23,21 @@ const Hero = ({ isOpen, setOpen }) => {
       <div className="fig__container">
         <div className="group__container1">
           <figure className="fig__long fig__1">
-            <img
+            {/* <img
               className="hero__img--1"
               src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/girl-studyng.png?alt=media&token=5284d3ba-f990-4fe0-9bda-88ccffd4088f"
               alt=""
-            />
+            /> */}
           </figure>
           <figure className="fig__short fig__2"></figure>
         </div>
         <div className="group__container2">
           <figure className="fig__long fig__3">
-            <img
+            {/* <img
               className="hero__img--1"
               src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/attractive-laughing-guy-having-fun-smiling-happy-removebg-preview.png?alt=media&token=41aaac15-d0e8-4d35-a084-0389ae65264a"
               alt=""
-            />
+            /> */}
           </figure>
           <figure className="fig__circle fig__4"></figure>
         </div>

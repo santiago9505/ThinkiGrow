@@ -9,7 +9,6 @@ import "../../assets/styles/Comunities.css";
 const Comunities = () => {
   const [principal, setPrincipal] = useState([]);
   const [secondary, setSecondary] = useState([]);
-  const [third, setThird] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
@@ -23,17 +22,19 @@ const Comunities = () => {
   }, []);
 
   const gettingPrincipalAndSecondary = (projects) => {
-    for (let i = 0; i < projects.length; i++) {
-      if (projects[i].third) {
-        setThird(projects[i]);
-      } else if (projects[i].secondary) {
-        setSecondary(projects[i]);
-      } else if (projects[i].principal) {
-        setPrincipal(projects[i]);
+    let allSecondary = [];
+    console.log(Object.values(projects).length);
+
+    for (let i = 0; i < Object.values(projects).length; i++) {
+      if (Object.values(projects)[i].secondary) {
+        allSecondary.push(Object.values(projects)[i]);
+      } else if (Object.values(projects)[i].principal) {
+        setPrincipal(Object.values(projects)[i]);
       } else {
         continue;
       }
     }
+    setSecondary(allSecondary);
   };
 
   return (
@@ -43,20 +44,17 @@ const Comunities = () => {
       </article>
       <div className="comunities-container">
         <div className="comunities__secondary--container">
-          <CardSecondary
-            id={secondary.id}
-            imageUrl={secondary.image}
-            imageLogo={secondary.logo}
-            name={secondary.name}
-            paragraph={secondary.description}
-          />
-          <CardSecondary
-            id={third.id}
-            imageUrl={third.image}
-            imageLogo={third.logo}
-            name={third.name}
-            paragraph={third.description}
-          />
+          {secondary.map((item) => {
+            return (
+              <CardSecondary
+                id={item.id}
+                imageUrl={item.image}
+                imageLogo={item.logo}
+                name={item.name}
+                paragraph={item.description}
+              />
+            );
+          })}
         </div>
         <div className="comunities__principal--container">
           <CardPrincipal

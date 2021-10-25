@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 
 //styles
 import "../assets/styles/Project.css";
+import Comunities from "../components/Comunities/Comunities";
 
 const Project = () => {
   const [communities, setCommunities] = useState([]);
@@ -18,6 +19,7 @@ const Project = () => {
     };
     getData();
   }, []);
+  console.log(communities);
 
   return (
     <div className="project">
@@ -44,8 +46,8 @@ const Project = () => {
               />{" "}
               Fecha de inicio
             </h3>
-            <article className="more__information">
-              <p className="date">Lunes</p>
+            <article value={communities.start} className="more__information">
+              <p className="date">{communities.start}</p>
               <p className="date">04</p>
               <p className="date">OCT</p>
             </article>
@@ -59,7 +61,7 @@ const Project = () => {
               Creador del grupo
             </h3>
             <article className="more__information">
-              <p className="date complete">{communities.creator}</p>
+              {/* <p className="date complete">{communities.creator.name}</p> */}
             </article>
           </article>
           <article>
@@ -71,7 +73,7 @@ const Project = () => {
               Correo electrónico
             </h3>
             <article className="more__information">
-              <p className="date complete">pepitoperez@gmail.com</p>
+              <p className="date complete"></p>
             </article>
           </article>
           <article>
@@ -83,7 +85,7 @@ const Project = () => {
               Participantes
             </h3>
             <article className="more__information">
-              <p className="date complete">6 participantes</p>
+              <p className="date complete">max-members</p>
             </article>
           </article>
           <article>
@@ -104,33 +106,6 @@ const Project = () => {
                 alt="discord"
               />
             </article>
-          </article>
-        </div>
-        <article>
-          <h1>OBJETIVOS</h1>
-        </article>
-        <div className="section about__project">
-          <article className="general__goal">
-            <h3>Objetivo General</h3>
-            <p>
-              Realizar actividades por competencias, que permitan al aprendizaje
-              de la lengua inglesa, hasta uin nivel B1
-            </p>
-          </article>
-          <article className="specific__goals">
-            <h3>Objetivos Específicos</h3>
-            <p>
-              Mejorar las competencias de listening mediante audiolibros,
-              meetups, y materiales y actividades relacionadas
-            </p>
-            <p>
-              Realizar actividades de Reading, con materiales escritos en lengua
-              inglesa, tales como libros, artículos, noticias, entre otros
-            </p>
-            <p>
-              Realizar actividades de Reading, con materiales escritos en lengua
-              inglesa, tales como libros, artículos, noticias, entre otros
-            </p>
           </article>
         </div>
         <article>
