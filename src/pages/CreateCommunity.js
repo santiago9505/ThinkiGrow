@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import app from "../firebase";
 import { AuthContext } from "../auth/Auth";
+import Modal from "../components/Modals/SignupModal";
 
 //styles
 import "../assets/styles/CreateCommunity.css";
@@ -18,6 +19,13 @@ const CreateCommunity = () => {
 
   //currentUser
   const { currentUser } = useContext(AuthContext);
+
+  //Modal
+  const [modal, setModal] = useState(false);
+
+  const onSubmit = () => {
+    setModal(true);
+  };
 
   const handleChange = (e) => {
     const file = e.target.files[0];
@@ -207,6 +215,7 @@ const CreateCommunity = () => {
     };
 
     communityRef.set(Community);
+    onSubmit();
   };
 
   return (
@@ -243,9 +252,11 @@ const CreateCommunity = () => {
               form === 2 ? "form__sections section__selected" : "form__sections"
             }
           ></div>
+
           <a href="/">Programación de actividades</a>
         </li>
       </ul>
+
       <form
         className={form === 0 ? "create__form" : "create__form basic__form"}
         onSubmit={handleSubmit}
@@ -380,6 +391,7 @@ const CreateCommunity = () => {
           <button type="submit">Continuar</button>
         </label>
       </form>
+      <Modal modal={modal} setModal={setModal} />
       <form
         onSubmit={handleSubmitSpecific}
         className={form === 1 ? "create__form" : "create__form specific__form"}

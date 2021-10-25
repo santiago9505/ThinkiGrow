@@ -1,14 +1,18 @@
 .modal {
-  position: absolute;
+  position: fixed;
   background-color: #1c193f;
   color: white;
   display: flex;
   flex-direction: column;
   width: 80%;
+  max-width: 500px;
   opacity: 2;
   text-align: center;
   padding: 1rem;
+  top: 50%;
+  transform: translate(0%, -50%);
   gap: 1rem;
+  border: 1px solid var(--yellow-principal);
 }
 
 .logo {
@@ -21,11 +25,23 @@
 
 .btn {
   background-color: #1c193f;
+  cursor: pointer;
   color: white;
   text-decoration: none;
-  width: 100px;
+  width: 130px;
   padding: 0.5rem;
   border: 2px solid #f0e71f;
   border-radius: 20px;
   margin-top: 1rem;
+}
+
+.btn:hover {
+  background: #393466;
+  transition: 0.5s;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
 }
