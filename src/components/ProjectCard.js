@@ -1,7 +1,7 @@
 import React from "react";
 
 //styles
-import "../assets/styles/Project.css";
+import "../assets/styles/ProjectCard.css";
 
 const ProjectCard = () => {
   return (

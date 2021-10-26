@@ -76,7 +76,7 @@ const Header = () => {
           </Link>
         </li>
         <li className={currentUser ? "profile-hide" : "list__items--container"}>
-          <Link className="link" onClick={hideMenu} to="sign-up">
+          <Link className="link" onClick={hideMenu} to="/sign-up">
             REGÍSTRATE{" "}
             <img
               src={RegisterImg}
@@ -86,7 +86,7 @@ const Header = () => {
           </Link>
         </li>
         <li className={currentUser ? "profile-hide" : "list__items--container"}>
-          <Link className="link" onClick={hideMenu} to="login">
+          <Link className="link" onClick={hideMenu} to="/login">
             INGRESAR{" "}
             <img
               src="https://firebasestorage.googleapis.com/v0/b/succestory-e7b89.appspot.com/o/login.svg?alt=media&token=0fbe57f9-f493-4b29-a9ca-b33ec9cc4a35"

@@ -26,6 +26,9 @@ function App({ isOpen, setOpen }) {
             <Route exact path="/home">
               <Home />
             </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
             <Route exact path="/sign-up">
               <Sign />
             </Route>
@@ -38,9 +41,7 @@ function App({ isOpen, setOpen }) {
             <Route exact path="/project/:id">
               <Project />
             </Route>
-            <Route exact path="/login">
-              <Login />
-            </Route>
+
             <Route exact path="/privada">
               <PrivateRoute />
             </Route>
