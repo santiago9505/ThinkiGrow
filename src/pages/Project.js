@@ -24,6 +24,7 @@ const Project = () => {
   }, []);
   console.log(communities);
 
+
   return (
     <section className="project">
       <div className="project__container">
@@ -65,7 +66,9 @@ const Project = () => {
                     <div className="info__date--logoAdmin"></div>
                     <p>Responsable del grupo</p>
                   </div>
-                  <p>{communities.creator}</p>
+                  <p>
+                    juanito
+                  </p>
                 </div>
                 <div className="gruopData__info--adminEmail">
                   <div>
@@ -95,7 +98,7 @@ const Project = () => {
                     </a>
                   </div>
                 </div>
-              </div>      
+              </div>
             </article>
 
             <article className="oneSection__groupGoals">
@@ -117,14 +120,15 @@ const Project = () => {
 
           <article className="information__data--secondSection">
             <div>
-              <h2>PROGRAMACION MENSUAL</h2>
+              <h2 className="secondSection__project--tittle">PROGRAMACION MENSUAL</h2>
             </div>
-            <div id="project__carousel" className="secondSection__carousel">
+            <div className="secondSection__carousel">
               <ProjectCard/>
               <ProjectCard/>
               <ProjectCard/>
             </div>
           </article>
+        </section>
       </div>
     </section>
   );
