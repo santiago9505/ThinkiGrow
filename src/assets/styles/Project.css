@@ -275,3 +275,9 @@
     gap: 30px;
   }
 }
+
+@media (min-width: 1280px) {
+  .project{
+    padding: 0 170px 0 170px;
+  }
+}
