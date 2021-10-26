@@ -61,7 +61,9 @@ const Project = () => {
               Creador del grupo
             </h3>
             <article className="more__information">
-              {/* <p className="date complete">{communities.creator.name}</p> */}
+              <p className="date complete">
+                {/* {Object.assign(communities.creator.name)} */}
+              </p>
             </article>
           </article>
           <article>
