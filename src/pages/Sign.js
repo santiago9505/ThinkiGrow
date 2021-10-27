@@ -1,14 +1,16 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useContext } from "react";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 import app from "../firebase";
 import Modal from "../components/Modals/SignupModal.js";
+import { AuthContext } from "../auth/Auth";
 
 //styles
 import "../assets/styles/Sign.css";
 
 const Sign = () => {
   const [modal, setModal] = useState(false);
+  const { currentUser } = useContext(AuthContext);
 
   const onRegister = () => {
     setModal(true);
@@ -23,24 +25,10 @@ const Sign = () => {
         .auth()
         .createUserWithEmailAndPassword(email.value, password.value);
       onRegister();
-      creatingNewUser(email.value);
     } catch (error) {
       alert(error);
     }
   });
-
-  const creatingNewUser = (email) => {
-    const userRef = app.database().ref("users").push();
-    var key = userRef.key;
-    const user = {
-      email: email,
-      id: key,
-      name: "",
-      number: "",
-    };
-
-    userRef.set(user);
-  };
 
   return (
     <div className="sign">

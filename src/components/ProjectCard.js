@@ -3,11 +3,18 @@ import React from "react";
 //styles
 import "../assets/styles/ProjectCard.css";
 
-const ProjectCard = () => {
+const ProjectCard = ({
+  activityName,
+  activityDate,
+  activityLocation,
+  activityStart,
+  activityEnd,
+  activityDescription,
+}) => {
   return (
     <div className="schedule__card">
       <article>
-        <h2>LISTENING</h2>
+        <h2>{activityName}</h2>
       </article>
       <article className="project__card--info">
         <article className="project__card--item">
@@ -18,7 +25,7 @@ const ProjectCard = () => {
             />{" "}
             Fecha
           </h3>
-          <p>Lunes, 04 de octubre del 2021</p>
+          <p>{activityDate}</p>
           <p>Modalidad</p>
           <p>Virtual</p>
         </article>

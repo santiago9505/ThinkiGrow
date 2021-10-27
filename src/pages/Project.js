@@ -1,14 +1,28 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import ProjectCard from "../components/ProjectCard";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
+import ModalRegister from "../components/Modals/ModalRegister";
+
+//user
+import { AuthContext } from "../auth/Auth";
 
 //styles
 import "../assets/styles/Project.css";
-import Comunities from "../components/Comunities/Comunities";
 
 const Project = () => {
+  const { currentUser } = useContext(AuthContext);
+  const [modal, setModal] = useState(false);
+  const [join, setJoin] = useState(false);
+
   const [communities, setCommunities] = useState([]);
+  const [creator, setCreator] = useState([]);
+  const [channels, setChannels] = useState([]);
+  const [activities, setActivities] = useState([]);
+  const [firstWeek, setFirstWeek] = useState([]);
+  const [secondWeek, setSecondWeek] = useState([]);
+  const [thirdWeek, setThirdWeek] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
@@ -17,10 +31,27 @@ const Project = () => {
       const data = await fetch(url);
       const projects = await data.json();
       setCommunities(projects);
+      setCreator(projects.creator);
+      setChannels(projects.channels);
+      setActivities(projects.schedule);
+      setFirstWeek(projects.schedule.firstWeek);
+      setSecondWeek(projects.schedule.secondWeek);
+      setThirdWeek(projects.schedule.thirdWeek);
     };
     getData();
   }, []);
-  console.log(communities);
+
+  const handleJoin = () => {
+    if (currentUser) {
+      setModal(true);
+    } else {
+      alert("Debes estar registrado");
+    }
+  };
+
+  const leftCommunity = () => {
+    setJoin(false);
+  };
 
   return (
     <section className="project">
@@ -47,35 +78,35 @@ const Project = () => {
                     <div className="info__date--logoDate"></div>
                     <p>Fecha de inicio</p>
                   </div>
-                  <p>Lunes, 04 de octubre de 2021</p>
+                  <p>{communities.start}</p>
                 </div>
                 <div className="gruopData__info--location">
                   <div>
                     <div className="info__date--logoLocation"></div>
                     <p>Lugar</p>
                   </div>
-                  <p>Frankfurt, Colombia</p>
+                  <p>{communities.location}</p>
                 </div>
                 <div className="gruopData__info--admin">
                   <div>
                     <div className="info__date--logoAdmin"></div>
                     <p>Responsable del grupo</p>
                   </div>
-                  <p>juanito</p>
+                  <p>{creator.name}</p>
                 </div>
                 <div className="gruopData__info--adminEmail">
                   <div>
                     <div className="info__date--logoEmail"></div>
                     <p>Correo responsable del grupo</p>
                   </div>
-                  <p>usuario@gmail.com</p>
+                  <p>{creator.email}</p>
                 </div>
                 <div className="gruopData__info--adminPhone">
                   <div>
                     <div className="info__date--logoPhone"></div>
                     <p>Telefono responsable del grupo</p>
                   </div>
-                  <p>+57 3101234569</p>
+                  <p>{creator.number}</p>
                 </div>
                 <div className="gruopData__info--socialNet">
                   <div>
@@ -83,10 +114,16 @@ const Project = () => {
                     <p>Canales</p>
                   </div>
                   <div className="info__socialNet--container">
-                    <a href="#" className="socialNet--container--discord">
+                    <a
+                      href={channels.discord}
+                      className="socialNet--container--discord"
+                    >
                       <div className="socialNet__discord--logo"></div>
                     </a>
-                    <a href="#" className="socialNet--container--whatsapp">
+                    <a
+                      href={channels.whatsapp}
+                      className="socialNet--container--whatsapp"
+                    >
                       <div className="socialNet__whatsapp--logo"></div>
                     </a>
                   </div>
@@ -132,13 +169,52 @@ const Project = () => {
               </h2>
             </div>
             <div className="secondSection__carousel">
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
+              <ProjectCard
+                activityName={firstWeek.activityName}
+                activityDate={firstWeek.activityDate}
+                activityLocation={firstWeek.activityLocation}
+                activityStart={firstWeek.activityStart}
+                activityEnd={firstWeek.activityEnd}
+                activityDescription={firstWeek.activityDescription}
+              />
+              <ProjectCard
+                activityName={secondWeek.activityName}
+                activityDate={secondWeek.activityDate}
+                activityLocation={secondWeek.activityLocation}
+                activityStart={secondWeek.activityStart}
+                activityEnd={secondWeek.activityEnd}
+                activityDescription={secondWeek.activityDescription}
+              />
             </div>
           </article>
         </section>
+        <div className="button__container">
+          <Link to="/home">
+            <button>VOLVER</button>
+          </Link>
+          <button
+            className={join ? "notJoined" : "buttonOpen"}
+            onClick={handleJoin}
+          >
+            UNIRSE
+          </button>
+          <button
+            onClick={leftCommunity}
+            className={!join ? "notJoined" : "buttonOpen"}
+          >
+            ABANDONAR
+          </button>
+        </div>
+        <div className={join ? "joined" : "notJoined"}>
+          <h3>Ya eres parte de la comunidad</h3>
+        </div>
       </div>
+      <ModalRegister
+        modal={modal}
+        setModal={setModal}
+        join={join}
+        setJoin={setJoin}
+      />
     </section>
   );
 };
