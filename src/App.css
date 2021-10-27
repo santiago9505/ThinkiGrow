@@ -1,15 +1,14 @@
 /*roboto 400*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-:root{
-  --white-principal: #FEFEFE;
-  --purple-principal-background: #1C193F;
-  --blue-second-background: #0C1430;
-  --yellow-principal: #FFDD00;
-  --grey-dark: #5C5C5C;
-  --violet-menu-dark: #19022C;
-  --purple-cards: #433E7E;
-
+:root {
+  --white-principal: #fefefe;
+  --purple-principal-background: #1c193f;
+  --blue-second-background: #0c1430;
+  --yellow-principal: #ffdd00;
+  --grey-dark: #5c5c5c;
+  --violet-menu-dark: #19022c;
+  --purple-cards: #433e7e;
 }
 
 * {

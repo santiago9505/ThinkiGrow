@@ -177,14 +177,6 @@ const Project = () => {
                 activityEnd={firstWeek.activityEnd}
                 activityDescription={firstWeek.activityDescription}
               />
-              <ProjectCard
-                activityName={secondWeek.activityName}
-                activityDate={secondWeek.activityDate}
-                activityLocation={secondWeek.activityLocation}
-                activityStart={secondWeek.activityStart}
-                activityEnd={secondWeek.activityEnd}
-                activityDescription={secondWeek.activityDescription}
-              />
             </div>
           </article>
         </section>

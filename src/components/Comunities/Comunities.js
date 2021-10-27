@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import CardSecondary from "./CardSecondary";
@@ -15,16 +14,20 @@ const Comunities = () => {
     const getData = async () => {
       const url =
         "https://thinkigrow-development-default-rtdb.firebaseio.com/communities.json";
-      const data = await fetch(url);
-      const projects = await data.json();
-      gettingPrincipalAndSecondary(projects);
+      try {
+        const data = await fetch(url);
+        console.log("No hay datos");
+        const projects = await data.json();
+        gettingPrincipalAndSecondary(projects);
+      } catch (error) {
+        console.log(error);
+      }
     };
     getData();
   }, []);
 
   const gettingPrincipalAndSecondary = (projects) => {
     let allSecondary = [];
-    console.log(Object.values(projects).length);
 
     for (let i = 0; i < Object.values(projects).length; i++) {
       if (Object.values(projects)[i].secondary) {
