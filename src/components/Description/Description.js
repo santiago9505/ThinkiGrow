@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+
+import { AuthContext } from "../../auth/Auth";
 
 //styles
 import "../../assets/styles/Description.css";
 
 const Description = () => {
+  const { currentUser } = useContext(AuthContext);
+  console.log("hola" + currentUser);
   return (
     <div className="description">
       <div className="description__item">
@@ -50,7 +54,7 @@ const Description = () => {
           personas se puedan unir.
         </p>
         <div>
-          <Link to="/create">
+          <Link to={currentUser ? "/create" : "/login"}>
             <button className="description__button">CREA</button>
           </Link>
         </div>

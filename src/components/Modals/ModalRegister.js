@@ -6,8 +6,8 @@ import { AuthContext } from "../../auth/Auth";
 
 import "../../assets/styles/ModalRegister.css";
 
-const ModalRegister = ({ modal, setModal, join, setJoin }) => {
-  const { currentUser } = useContext(AuthContext);
+const ModalRegister = ({ modal, setModal }) => {
+  const { currentUser, join, setJoin } = useContext(AuthContext);
   const closeModal = () => {
     setModal(false);
   };

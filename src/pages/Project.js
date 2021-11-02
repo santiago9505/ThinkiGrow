@@ -12,9 +12,8 @@ import { AuthContext } from "../auth/Auth";
 import "../assets/styles/Project.css";
 
 const Project = () => {
-  const { currentUser } = useContext(AuthContext);
+  const { currentUser, join, setJoin } = useContext(AuthContext);
   const [modal, setModal] = useState(false);
-  const [join, setJoin] = useState(false);
 
   const [communities, setCommunities] = useState([]);
   const [creator, setCreator] = useState([]);
@@ -201,12 +200,7 @@ const Project = () => {
           <h3>Ya eres parte de la comunidad</h3>
         </div>
       </div>
-      <ModalRegister
-        modal={modal}
-        setModal={setModal}
-        join={join}
-        setJoin={setJoin}
-      />
+      <ModalRegister modal={modal} setModal={setModal} />
     </section>
   );
 };

@@ -62,7 +62,7 @@ const Login = ({ history }) => {
             </span>
             <input
               name="password"
-              placeholder="Email"
+              placeholder="Contraseña"
               className="signup__input input"
               type="password"
               required
